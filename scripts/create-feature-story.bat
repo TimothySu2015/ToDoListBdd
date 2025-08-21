@@ -1,0 +1,41 @@
+@echo off
+REM scripts/create-feature-story.bat
+REM 建立業務功能 Story 的 Windows 腳本
+
+if "%~1"=="" goto :usage
+if "%~2"=="" goto :usage
+
+set STORY_NUMBER=%~1
+set STORY_TITLE=%~2
+
+echo 建立業務功能 Story %STORY_NUMBER%: %STORY_TITLE%
+
+REM 建立 Story 專用資料夾
+set STORY_DIR=docs\stories\feature-story-%STORY_NUMBER%
+if not exist "%STORY_DIR%" mkdir "%STORY_DIR%"
+
+REM 複製範本檔案
+copy templates\feature-story-template.md "%STORY_DIR%\README.md" >nul
+
+REM 替換範本變數 (Windows PowerShell 方式)
+powershell -Command "(Get-Content '%STORY_DIR%\README.md') -replace '\[編號\]', '%STORY_NUMBER%' | Set-Content '%STORY_DIR%\README.md'"
+powershell -Command "(Get-Content '%STORY_DIR%\README.md') -replace '\[業務功能標題\]', '%STORY_TITLE%' | Set-Content '%STORY_DIR%\README.md'"
+
+echo ✅ 業務功能 Story %STORY_NUMBER% 已建立完成
+echo 📁 檔案位置: %STORY_DIR%\README.md
+echo.
+echo 📋 接下來的步驟:
+echo 1. 編輯 %STORY_DIR%\README.md
+echo 2. ⚡ 第一步：撰寫 BDD 場景 (必須完成才能繼續)
+echo 3. 基於 BDD 場景推導技術需求
+echo 4. 先寫 BDD 測試，再實作程式碼
+echo.
+echo 🚨 重要提醒: 業務功能 Story 的第一步必須是撰寫 BDD 場景！
+echo 📖 參考文件: docs\prd-final.md (查看 FR1-FR10 功能需求)
+goto :end
+
+:usage
+echo 使用方式: %0 ^<Story編號^> ^<Story標題^>
+echo 範例: %0 1 "實作新增任務功能"
+
+:end
