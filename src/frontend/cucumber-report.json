@@ -1,0 +1,2980 @@
+[
+  {
+    "description": "  身為 生產力使用者\n  我想要 在前端介面中刪除不需要的任務\n  以便 我可以保持待辦清單整潔",
+    "elements": [
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac1---每個任務項目都有刪除按鈕（滑鼠懸停時顯示）",
+        "keyword": "場景",
+        "line": 15,
+        "name": "AC1 - 每個任務項目都有刪除按鈕（滑鼠懸停時顯示）",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 216300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 222499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6628399
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 697200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 16,
+            "name": "我將滑鼠懸停在任務 \"完成專案報告\" 上",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2526700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 17,
+            "name": "我應該看到刪除按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 450800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 18,
+            "name": "刪除按鈕應該有適當的圖示",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 485400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 19,
+            "name": "我將滑鼠移開任務項目",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 326999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 20,
+            "name": "刪除按鈕應該隱藏",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 349100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 274399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac2---點擊刪除按鈕時顯示確認對話框",
+        "keyword": "場景",
+        "line": 22,
+        "name": "AC2 - 點擊刪除按鈕時顯示確認對話框",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 334500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109799
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 23,
+            "name": "我懸停在任務 \"完成專案報告\" 上",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1502700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 24,
+            "name": "我點擊刪除按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 424100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 25,
+            "name": "我應該看到確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 361200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 26,
+            "name": "確認對話框應該是可見的",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 326700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 220600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 37199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac3---確認對話框包含任務描述和選項",
+        "keyword": "場景",
+        "line": 28,
+        "name": "AC3 - 確認對話框包含任務描述和選項",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 214400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65599
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 29,
+            "name": "我點擊任務 \"完成專案報告\" 的刪除按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1101399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 30,
+            "name": "確認對話框顯示",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 269199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 31,
+            "name": "對話框應該包含任務描述 \"完成專案報告\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1122599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 32,
+            "name": "對話框應該有 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1966799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 33,
+            "name": "對話框應該有 \"取消\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 206599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 475100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac4---點擊「確認刪除」永久移除任務並更新列表",
+        "keyword": "場景",
+        "line": 35,
+        "name": "AC4 - 點擊「確認刪除」永久移除任務並更新列表",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 177799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92799
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 36,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1262799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 37,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 870999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 38,
+            "name": "任務 \"完成專案報告\" 應該從任務列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1073200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 39,
+            "name": "確認對話框應該關閉",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 40,
+            "name": "任務列表應該更新",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 468499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac5---點擊「取消」或按-escape-鍵取消刪除操作",
+        "keyword": "場景",
+        "line": 42,
+        "name": "AC5 - 點擊「取消」或按 Escape 鍵取消刪除操作",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 305200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 43,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 44,
+            "name": "我點擊 \"取消\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 45,
+            "name": "確認對話框應該關閉",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 46,
+            "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1040499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac5b---按-escape-鍵取消刪除操作",
+        "keyword": "場景",
+        "line": 48,
+        "name": "AC5b - 按 Escape 鍵取消刪除操作",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 118899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61799
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 49,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 50,
+            "name": "我按下 Escape 鍵",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:169"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 51,
+            "name": "確認對話框應該關閉",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 52,
+            "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 121900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 24499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac6---刪除操作即時同步到後端-api",
+        "keyword": "場景",
+        "line": 54,
+        "name": "AC6 - 刪除操作即時同步到後端 API",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 35900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 55,
+            "name": "後端 API 可用",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:174"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 56,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 57,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 58,
+            "name": "系統應該發送 DELETE 請求到後端 API",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:178"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 502799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 59,
+            "name": "API 請求應該包含正確的任務 ID",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:183"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 101300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 18399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac7---任務成功刪除後顯示確認訊息",
+        "keyword": "場景",
+        "line": 61,
+        "name": "AC7 - 任務成功刪除後顯示確認訊息",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57600
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 62,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 63,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 64,
+            "name": "刪除操作成功",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 233099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 65,
+            "name": "我應該看到成功訊息 \"任務已成功刪除\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:193"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 818899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 66,
+            "name": "成功訊息應該在 3 秒後自動消失",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 661599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 107999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac8---任務計數器即時更新",
+        "keyword": "場景",
+        "line": 68,
+        "name": "AC8 - 任務計數器即時更新",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 36399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 115600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59899
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 69,
+            "name": "當前任務計數顯示為 \"3 個任務\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:205"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 916099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 70,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 71,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 72,
+            "name": "刪除操作成功",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 73,
+            "name": "任務計數器應該更新為 \"2 個任務\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:211"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 713999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 74,
+            "name": "計數器更新應該是即時的",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:216"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 217899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac9---網路錯誤時顯示錯誤訊息並保持任務不變",
+        "keyword": "場景",
+        "line": 76,
+        "name": "AC9 - 網路錯誤時顯示錯誤訊息並保持任務不變",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83199
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 77,
+            "name": "網路連線中斷",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:221"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 266099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 78,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 79,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 80,
+            "name": "我應該看到錯誤訊息 \"刪除失敗，請檢查網路連線\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:225"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 680799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 81,
+            "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 82,
+            "name": "確認對話框應該關閉",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac10---支援鍵盤操作（delete-鍵刪除選中的任務）",
+        "keyword": "場景",
+        "line": 84,
+        "name": "AC10 - 支援鍵盤操作（Delete 鍵刪除選中的任務）",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 34699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 129100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72300
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 85,
+            "name": "我選中任務 \"完成專案報告\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:233"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 641200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 86,
+            "name": "我按下 Delete 鍵",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:238"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 87,
+            "name": "我應該看到刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:385"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 88,
+            "name": "對話框應該顯示選中任務的描述",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:244"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac11---刪除動畫效果",
+        "keyword": "場景",
+        "line": 90,
+        "name": "AC11 - 刪除動畫效果",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 88500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49299
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 91,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 92,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 93,
+            "name": "刪除操作成功",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 94,
+            "name": "任務應該有淡出動畫效果",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:250"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 95,
+            "name": "任務應該平滑地從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:255"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 85499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac12---刪除操作記錄到系統日誌",
+        "keyword": "場景",
+        "line": 97,
+        "name": "AC12 - 刪除操作記錄到系統日誌",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 92300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52400
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 98,
+            "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 99,
+            "name": "我點擊 \"確認刪除\" 按鈕",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 100,
+            "name": "刪除操作成功",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 101,
+            "name": "系統應該記錄刪除操作日誌",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 277000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 102,
+            "name": "日誌應該包含任務 ID 和描述",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:264"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 253799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac13---已完成任務和待辦任務都可以被刪除",
+        "keyword": "場景",
+        "line": 104,
+        "name": "AC13 - 已完成任務和待辦任務都可以被刪除",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78500
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 105,
+            "name": "我嘗試刪除已完成任務 \"開會討論需求\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:273"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 740800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 106,
+            "name": "我應該能夠成功刪除該任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 243200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 107,
+            "name": "任務應該從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 211900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 108,
+            "name": "我嘗試刪除待辦任務 \"撰寫技術文件\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:280"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 551699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 109,
+            "name": "我應該能夠成功刪除該任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 110,
+            "name": "任務應該從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;ac14---刪除最後一個任務時顯示空狀態提示",
+        "keyword": "場景",
+        "line": 112,
+        "name": "AC14 - 刪除最後一個任務時顯示空狀態提示",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 79700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44599
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 113,
+            "name": "任務列表中只有一個任務 \"最後的任務\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:298"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 553800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 114,
+            "name": "我刪除這個任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:307"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 183399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 115,
+            "name": "刪除操作成功",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 116,
+            "name": "任務列表應該顯示空狀態",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:325"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 208499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 117,
+            "name": "空狀態應該包含提示訊息 \"目前沒有任務\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:330"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 574399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 118,
+            "name": "空狀態應該有新增任務的建議",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:334"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;批量驗證不同任務狀態的刪除功能",
+        "keyword": "場景大綱",
+        "line": 128,
+        "name": "批量驗證不同任務狀態的刪除功能",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 29099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 121,
+            "name": "我有一個 待辦 任務 \"學習新技術\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 726800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 122,
+            "name": "我刪除選中的任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 123,
+            "name": "任務應該成功從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 207700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 124,
+            "name": "應該顯示相應的成功訊息",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 402600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 110899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;批量驗證不同任務狀態的刪除功能",
+        "keyword": "場景大綱",
+        "line": 129,
+        "name": "批量驗證不同任務狀態的刪除功能",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 110699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64200
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 121,
+            "name": "我有一個 已完成 任務 \"完成報告\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:351"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 676399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 122,
+            "name": "我刪除選中的任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 123,
+            "name": "任務應該成功從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 124,
+            "name": "應該顯示相應的成功訊息",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 71599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "前端刪除任務功能;批量驗證不同任務狀態的刪除功能",
+        "keyword": "場景大綱",
+        "line": 130,
+        "name": "批量驗證不同任務狀態的刪除功能",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 24900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 8,
+            "name": "我在任務管理頁面",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62100
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "description",
+                      "isCompleted"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "完成專案報告",
+                      "false"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "開會討論需求",
+                      "true"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "撰寫技術文件",
+                      "false"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "而且",
+            "line": 9,
+            "name": "系統中存在以下任務:",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "line": 121,
+            "name": "我有一個 待辦 任務 \"準備會議資料\"",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "line": 122,
+            "name": "我刪除選中的任務",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "line": 123,
+            "name": "任務應該成功從列表中移除",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "而且",
+            "line": 124,
+            "name": "應該顯示相應的成功訊息",
+            "match": {
+              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "前端刪除任務功能",
+    "line": 2,
+    "keyword": "功能",
+    "name": "前端刪除任務功能",
+    "tags": [],
+    "uri": "src\\tests\\features\\task-deletion.feature"
+  }
+]

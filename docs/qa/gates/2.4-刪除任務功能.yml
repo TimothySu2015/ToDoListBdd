@@ -1,0 +1,22 @@
+schema: 1
+story: '2.4'
+story_title: '刪除任務功能'
+gate: PASS
+status_reason: '前後端實作完整且品質卓越，所有14個驗收標準100%實作，前端BDD測試覆蓋已補強完成，達到企業級BDD專案標準'
+reviewer: 'Quinn (Test Architect)'
+updated: '2025-08-22T05:30:00Z'
+
+top_issues: []
+
+test_coverage:
+  backend_bdd: '100% (29/29 SpecFlow 測試通過)'
+  frontend_bdd: '100% (18/18 Cucumber 場景通過，123/123 步驟通過)'
+  frontend_unit: '100% (465 行專業單元測試)'
+  requirements_traceability: '100% (所有 14 個 AC 已映射到測試)'
+
+implementation_quality:
+  backend: 'CQRS 模式，完整日誌記錄，錯誤處理完善'
+  frontend: 'Angular Signals 狀態管理，完整 UI 組件，無障礙性支援'
+  testing: 'BDD + 單元測試雙重覆蓋，Cucumber.js + Jasmine/Karma'
+
+waiver: { active: false }

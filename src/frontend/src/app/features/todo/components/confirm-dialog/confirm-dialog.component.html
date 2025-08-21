@@ -1,0 +1,10 @@
+<div class="dialog-backdrop" *ngIf="isVisible" (click)="onBackdropClick()">
+  <div class="dialog-container" (click)="$event.stopPropagation()">
+    <h3>{{ title }}</h3>
+    <p>{{ message }}</p>
+    <div class="dialog-actions">
+      <button class="btn-cancel" (click)="onCancel()">取消</button>
+      <button class="btn-confirm" (click)="onConfirm()">確認刪除</button>
+    </div>
+  </div>
+</div>

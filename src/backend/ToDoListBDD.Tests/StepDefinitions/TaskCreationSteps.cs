@@ -43,6 +43,10 @@ public class TaskCreationSteps
             ToDoListBDD.API.Application.Validators.CreateTaskCommandValidator>();
         services.AddTransient<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.UpdateTaskStatusCommand>, 
             ToDoListBDD.API.Application.Validators.UpdateTaskStatusCommandValidator>();
+        services.AddTransient<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.UpdateTaskDescriptionCommand>, 
+            ToDoListBDD.API.Application.Validators.UpdateTaskDescriptionCommandValidator>();
+        services.AddTransient<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.DeleteTaskCommand>, 
+            ToDoListBDD.API.Application.Validators.DeleteTaskCommandValidator>();
         
         _serviceProvider = services.BuildServiceProvider();
         _context = _serviceProvider.GetRequiredService<ApplicationDbContext>();
@@ -64,8 +68,10 @@ public class TaskCreationSteps
         var mediator = _serviceProvider.GetRequiredService<IMediator>();
         var createValidator = _serviceProvider.GetRequiredService<FluentValidation.IValidator<CreateTaskCommand>>();
         var updateValidator = _serviceProvider.GetRequiredService<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.UpdateTaskStatusCommand>>();
+        var updateDescriptionValidator = _serviceProvider.GetRequiredService<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.UpdateTaskDescriptionCommand>>();
+        var deleteValidator = _serviceProvider.GetRequiredService<FluentValidation.IValidator<ToDoListBDD.API.ApplicationCommands.DeleteTaskCommand>>();
         
-        var controller = new TasksController(mediator, createValidator, updateValidator);
+        var controller = new TasksController(mediator, createValidator, updateValidator, updateDescriptionValidator, deleteValidator);
         
         var result = await controller.CreateTask(command);
         
@@ -157,7 +163,19 @@ public class TaskCreationSteps
         Assert.NotNull(_response);
         Assert.NotNull(_response.Content);
         var responseBody = await _response.Content.ReadAsStringAsync();
-        Assert.Contains(expectedMessage, responseBody);
+        
+        // 處理 Unicode 編碼的內容
+        try
+        {
+            var jsonDoc = System.Text.Json.JsonDocument.Parse(responseBody);
+            var message = jsonDoc.RootElement.GetProperty("message").GetString();
+            Assert.Contains(expectedMessage, message ?? "");
+        }
+        catch
+        {
+            // 如果 JSON 解析失敗，回退到原始字符串比較
+            Assert.Contains(expectedMessage, responseBody);
+        }
     }
 
     [Then(@"任務應該儲存到資料庫")]

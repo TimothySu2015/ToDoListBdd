@@ -7,6 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:bdd": "cucumber-js",
+    "test:bdd:html": "cucumber-js --format html:cucumber-report.html",
+    "test:bdd:watch": "cucumber-js --watch",
+    "test:all": "npm run test && npm run test:bdd",
     "lint": "ng lint"
   },
   "prettier": {
@@ -37,8 +41,12 @@
     "@angular/compiler-cli": "^20.1.0",
     "@cucumber/cucumber": "^12.1.0",
     "@cucumber/html-formatter": "^21.14.0",
+    "@types/chai": "^4.3.20",
+    "@types/chai-spies": "^1.0.6",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "20.1.1",
+    "chai": "^4.5.0",
+    "chai-spies": "^1.1.0",
     "eslint": "^9.29.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
@@ -46,6 +54,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.8.2",
     "typescript-eslint": "8.34.1"
   }

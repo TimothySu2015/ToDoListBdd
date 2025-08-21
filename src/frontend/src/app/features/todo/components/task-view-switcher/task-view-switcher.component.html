@@ -1,0 +1,32 @@
+<!-- 檢視切換器 -->
+<div class="view-switcher" [class.loading]="loading()">
+  <button 
+    *ngFor="let view of viewTypes; trackBy: trackByType"
+    type="button"
+    class="view-button"
+    [class.active]="isActiveView(view.type)"
+    [disabled]="loading()"
+    [attr.data-testid]="view.testId"
+    [attr.aria-pressed]="isActiveView(view.type)"
+    [attr.aria-label]="'切換到' + view.label + '檢視，共 ' + getCountForView(view.type) + ' 個任務'"
+    (click)="switchView(view.type)">
+    
+    <!-- 按鈕文字和計數 -->
+    <span class="button-content">
+      <span class="view-label">{{ view.label }}</span>
+      <span class="task-count" [attr.data-testid]="view.testId + '-count'">
+        ({{ getCountForView(view.type) }})
+      </span>
+    </span>
+
+    <!-- 載入指示器 -->
+    <div *ngIf="loading() && isActiveView(view.type)" class="loading-indicator">
+      <div class="spinner"></div>
+    </div>
+  </button>
+</div>
+
+<!-- 載入狀態覆蓋層 -->
+<div *ngIf="loading()" class="loading-overlay" aria-hidden="true">
+  <div class="loading-text">載入中...</div>
+</div>

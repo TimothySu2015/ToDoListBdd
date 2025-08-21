@@ -123,8 +123,45 @@
   }
 
   p {
-    margin: 0;
+    margin: 0 0 1.5rem 0;
     font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .empty-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .refresh-button {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+
+      &:hover:not(:disabled) {
+        background: linear-gradient(135deg, #0056b3, #004085);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: 0 2px 4px rgba(0, 123, 255, 0.1);
+      }
+    }
   }
 }
 
@@ -175,6 +212,27 @@
 
   &.uncompleting {
     animation: taskUncomplete 0.3s ease-in-out;
+  }
+
+  &.deleting {
+    animation: slideOutAndFade 0.3s ease-in-out forwards;
+  }
+
+  &.selected {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+
+  &.editing-mode {
+    border-color: #fd7e14;
+    background-color: #fff5e6;
+    box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.15);
+  }
+
+  &:hover {
+    .task-actions {
+      opacity: 1;
+    }
   }
 
   // 最新任務高亮效果
@@ -279,6 +337,39 @@
 
   .task-id {
     opacity: 0.7;
+  }
+}
+
+.task-actions {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-left: 12px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  &:focus {
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+  }
+
+  .delete-icon {
+    font-size: 16px;
   }
 }
 
@@ -397,6 +488,65 @@
   }
   100% { 
     transform: scale(1); 
+  }
+}
+
+@keyframes slideOutAndFade {
+  0% { 
+    opacity: 1; 
+    transform: translateX(0);
+    max-height: 60px;
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: translateX(20px);
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateX(100%);
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// 編輯模式樣式
+.edit-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #fd7e14;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+
+  &:focus {
+    border-color: #fd7e14;
+    box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.25);
+  }
+
+  &.editing {
+    animation: editFocusIn 0.2s ease-out;
+  }
+
+  &::placeholder {
+    color: #adb5bd;
+  }
+}
+
+// 編輯動畫
+@keyframes editFocusIn {
+  from {
+    border-color: #e9ecef;
+    box-shadow: none;
+  }
+  to {
+    border-color: #fd7e14;
+    box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.25);
   }
 }
 

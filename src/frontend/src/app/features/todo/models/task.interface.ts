@@ -20,3 +20,9 @@ export interface CreateTaskResponse {
   task?: Task;
   errors?: TaskValidationError[];
 }
+
+export enum TaskViewType {
+  TODO = 'todo',
+  COMPLETED = 'completed',
+  ALL = 'all'
+}

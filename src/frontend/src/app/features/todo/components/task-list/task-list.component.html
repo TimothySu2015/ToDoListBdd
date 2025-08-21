@@ -50,9 +50,20 @@
     class="empty-state"
     data-testid="empty-state"
   >
-    <div class="empty-icon">📝</div>
-    <h3>還沒有任務</h3>
-    <p>開始新增您的第一個待辦任務吧！</p>
+    <div class="empty-icon">📋</div>
+    <h3>目前沒有任務</h3>
+    <p>太棒了！所有任務都已完成，或者您可以新增新的任務開始工作。</p>
+    <div class="empty-actions">
+      <button 
+        type="button" 
+        class="refresh-button"
+        (click)="reloadTasks()"
+        [disabled]="taskService.loading()"
+        data-testid="empty-refresh-button"
+      >
+        🔄 重新整理
+      </button>
+    </div>
   </div>
 
   <!-- 任務列表 -->
@@ -67,9 +78,14 @@
       [class.completed]="task.isCompleted"
       [class.completing]="isTaskAnimating(task.id, 'completing')"
       [class.uncompleting]="isTaskAnimating(task.id, 'uncompleting')"
+      [class.deleting]="isTaskAnimating(task.id, 'deleting')"
+      [class.selected]="selectedTaskId() === task.id"
+      [class.editing-mode]="isEditing(task.id)"
+      [attr.data-task-id]="task.id"
       [attr.data-testid]="'task-item-' + task.id"
       [attr.data-index]="i"
       tabindex="0"
+      (click)="selectTask(task.id)"
       (keydown)="onTaskItemKeydown($event, task)"
     >
       <div class="task-content">
@@ -89,16 +105,45 @@
         </div>
         
         <div class="task-details">
-          <p class="task-description task-text" 
+          <!-- 正常顯示模式 -->
+          <p *ngIf="!isEditing(task.id)" 
+             class="task-description task-text" 
              [class.completed-text]="task.isCompleted"
-             [title]="task.description">
+             [title]="task.description"
+             (dblclick)="onTaskTextDoubleClick(task)">
             {{ task.description }}
           </p>
+          
+          <!-- 編輯模式 -->
+          <input *ngIf="isEditing(task.id)"
+                 type="text"
+                 class="edit-input editing"
+                 [value]="editingText()"
+                 (input)="onEditTextChange($event)"
+                 (keydown)="onEditKeydown($event)"
+                 (blur)="onEditBlur()"
+                 [attr.data-testid]="'edit-input-' + task.id"
+                 maxlength="500"
+                 placeholder="輸入任務描述...">
+          
           <div class="task-meta">
             <span class="task-time">{{ formatDate(task.createdAt) }}</span>
             <span class="task-id">ID: {{ task.id }}</span>
           </div>
         </div>
+      </div>
+
+      <!-- 操作按鈕區域 -->
+      <div class="task-actions">
+        <button 
+          class="delete-btn"
+          (click)="showDeleteDialog(task); $event.stopPropagation()"
+          title="刪除任務"
+          [attr.data-testid]="'delete-button-' + task.id"
+          [attr.aria-label]="'刪除任務：' + task.description"
+        >
+          <span class="delete-icon">🗑️</span>
+        </button>
       </div>
 
       <!-- 新任務標記 (前3個任務顯示) -->
@@ -135,4 +180,17 @@
       🔄 重新整理
     </button>
   </div>
+
+  <!-- 確認刪除對話框 -->
+  <app-confirm-dialog
+    [isVisible]="showDeleteConfirm()"
+    title="確認刪除任務"
+    [message]="taskToDelete() ? '確定要刪除任務「' + taskToDelete()!.description + '」嗎？此操作無法撤銷。' : ''"
+    (confirmed)="confirmDelete()"
+    (cancelled)="cancelDelete()"
+    data-testid="delete-confirm-dialog">
+  </app-confirm-dialog>
+
+  <!-- Toast 通知元件 -->
+  <app-toast-notification></app-toast-notification>
 </div>

@@ -1,0 +1,151 @@
+.view-switcher {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  position: relative;
+  transition: opacity 0.2s ease;
+
+  &.loading {
+    opacity: 0.8;
+  }
+
+  .view-button {
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 400;
+    color: #374151;
+    min-width: 100px;
+    
+    .button-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .view-label {
+      font-weight: 500;
+    }
+
+    .task-count {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    &:hover:not(:disabled) {
+      background: #f3f4f6;
+      border-color: #d1d5db;
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &.active {
+      background: #3b82f6;
+      color: white;
+      border-color: #3b82f6;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+
+      .task-count {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      &:hover {
+        background: #2563eb;
+        border-color: #2563eb;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+  }
+
+  .loading-indicator {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    .spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(248, 249, 250, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 1;
+
+  .loading-text {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* 響應式設計 */
+@media (max-width: 640px) {
+  .view-switcher {
+    flex-direction: column;
+    gap: 6px;
+
+    .view-button {
+      min-width: unset;
+      width: 100%;
+    }
+  }
+}
+
+/* 動畫效果 */
+.view-switcher {
+  .view-button {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* 無障礙改善 */
+@media (prefers-reduced-motion: reduce) {
+  .view-switcher .view-button,
+  .loading-indicator .spinner {
+    transition: none;
+    animation: none;
+  }
+}

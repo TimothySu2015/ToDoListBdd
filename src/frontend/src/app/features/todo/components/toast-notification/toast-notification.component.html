@@ -1,0 +1,27 @@
+<div class="toast-container" data-testid="toast-container">
+  <div 
+    *ngFor="let notification of notifications(); trackBy: trackByNotificationId" 
+    class="toast-notification" 
+    [class]="'toast-' + notification.type"
+    [attr.data-testid]="'toast-' + notification.id"
+    role="alert"
+    [attr.aria-live]="notification.type === 'error' ? 'assertive' : 'polite'"
+  >
+    <div class="toast-icon">
+      <span>{{ getIcon(notification.type) }}</span>
+    </div>
+    <div class="toast-content">
+      <p class="toast-message">{{ notification.message }}</p>
+      <span class="toast-timestamp">{{ formatTimestamp(notification.timestamp) }}</span>
+    </div>
+    <button 
+      type="button" 
+      class="toast-close" 
+      (click)="removeNotification(notification.id)"
+      [attr.aria-label]="'關閉通知：' + notification.message"
+      data-testid="toast-close-button"
+    >
+      ✕
+    </button>
+  </div>
+</div>

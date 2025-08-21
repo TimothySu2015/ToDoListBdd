@@ -1,8 +1,9 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
-import { CreateTaskResponse } from '../../models/task.interface';
+import { ViewStateService } from '../../services/view-state.service';
+import { CreateTaskResponse, TaskViewType } from '../../models/task.interface';
 
 @Component({
   selector: 'app-task-input',
@@ -25,6 +26,8 @@ export class TaskInputComponent {
   canSubmit = computed(() => 
     this.taskDescription().trim().length > 0 && !this.isSubmitting()
   );
+
+  private viewStateService = inject(ViewStateService);
 
   constructor(public taskService: TaskService) {}
 
@@ -89,6 +92,11 @@ export class TaskInputComponent {
           // 成功 - 清空輸入框
           this.taskDescription.set('');
           this.validationError.set('');
+          
+          // 新增任務後自動切換到待辦檢視
+          if (this.viewStateService.getCurrentView() !== TaskViewType.TODO) {
+            this.viewStateService.setView(TaskViewType.TODO);
+          }
         } else {
           // 失敗 - 顯示錯誤訊息
           if (response.errors && response.errors.length > 0) {

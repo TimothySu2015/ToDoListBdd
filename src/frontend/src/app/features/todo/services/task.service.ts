@@ -2,7 +2,7 @@ import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError, of } from 'rxjs';
 import { catchError, map, finalize, tap, delay } from 'rxjs/operators';
-import { Task, CreateTaskRequest, CreateTaskResponse, TaskValidationError } from '../models/task.interface';
+import { Task, CreateTaskRequest, CreateTaskResponse, TaskValidationError, TaskViewType } from '../models/task.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -125,6 +125,90 @@ export class TaskService {
   }
 
   /**
+   * 刪除任務
+   * @param taskId 要刪除的任務 ID
+   * @returns Observable<boolean>
+   */
+  deleteTask(taskId: number): Observable<boolean> {
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    // 先樂觀地從本地狀態移除任務
+    const taskToDelete = this.tasksSignal().find(task => task.id === taskId);
+    if (taskToDelete) {
+      this.removeTaskFromState(taskId);
+    }
+
+    return this.http.delete(`${this.apiUrl}/${taskId}`, { observe: 'response' }).pipe(
+      map(response => response.status === 204),
+      tap(success => {
+        if (success) {
+          // 刪除成功，任務已經在樂觀更新中移除了
+          console.log(`任務 ${taskId} 已成功刪除`);
+        }
+      }),
+      catchError((error: HttpErrorResponse) => {
+        // 錯誤時恢復任務到狀態中
+        if (taskToDelete) {
+          this.addTaskToState(taskToDelete);
+        }
+        
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        return throwError(() => new Error(errorMessage));
+      }),
+      finalize(() => {
+        this.loadingSignal.set(false);
+      })
+    );
+  }
+
+  /**
+   * 更新任務描述
+   * @param taskId 要更新的任務 ID
+   * @param description 新的任務描述
+   * @returns Observable<Task>
+   */
+  updateTaskDescription(taskId: number, description: string): Observable<Task> {
+    // 客戶端驗證
+    const validationErrors = this.validateTaskDescription(description);
+    if (validationErrors.length > 0) {
+      return throwError(() => new Error(validationErrors[0].message));
+    }
+
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    // 保存原始描述用於錯誤回滾
+    const originalTask = this.tasksSignal().find(task => task.id === taskId);
+    if (!originalTask) {
+      return throwError(() => new Error('找不到要更新的任務'));
+    }
+
+    // 樂觀更新本地狀態
+    const updatedTask = { ...originalTask, description, updatedAt: new Date() };
+    this.updateTaskInList(updatedTask);
+
+    return this.http.patch<Task>(`${this.apiUrl}/${taskId}/description`, { description }).pipe(
+      tap(serverTask => {
+        // 使用伺服器回傳的任務資料更新本地狀態
+        this.updateTaskInList(serverTask);
+      }),
+      catchError((error: HttpErrorResponse) => {
+        // 錯誤時回滾本地狀態
+        this.updateTaskInList(originalTask);
+        
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        return throwError(() => new Error(errorMessage));
+      }),
+      finalize(() => {
+        this.loadingSignal.set(false);
+      })
+    );
+  }
+
+  /**
    * 取得所有任務
    */
   getAllTasks(): Observable<Task[]> {
@@ -132,6 +216,36 @@ export class TaskService {
     this.errorSignal.set(null);
 
     return this.http.get<Task[]>(this.apiUrl).pipe(
+      tap(tasks => {
+        this.tasksSignal.set(tasks);
+      }),
+      catchError((error: HttpErrorResponse) => {
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        return throwError(() => new Error(errorMessage));
+      }),
+      finalize(() => {
+        this.loadingSignal.set(false);
+      })
+    );
+  }
+
+  /**
+   * 根據狀態取得任務
+   * @param status 任務狀態篩選
+   * @returns Observable<Task[]>
+   */
+  getTasksByStatus(status?: TaskViewType): Observable<Task[]> {
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    let url = this.apiUrl;
+    if (status && status !== TaskViewType.ALL) {
+      const statusParam = status === TaskViewType.TODO ? 'todo' : 'completed';
+      url = `${this.apiUrl}?status=${statusParam}`;
+    }
+
+    return this.http.get<Task[]>(url).pipe(
       tap(tasks => {
         this.tasksSignal.set(tasks);
       }),
@@ -182,6 +296,29 @@ export class TaskService {
     this.tasksSignal.update(tasks => 
       tasks.map(task => task.id === updatedTask.id ? updatedTask : task)
     );
+  }
+
+  /**
+   * 從狀態中移除任務
+   */
+  private removeTaskFromState(taskId: number): void {
+    this.tasksSignal.update(tasks => 
+      tasks.filter(task => task.id !== taskId)
+    );
+  }
+
+  /**
+   * 添加任務到狀態中
+   */
+  private addTaskToState(task: Task): void {
+    this.tasksSignal.update(tasks => {
+      // 確保不重複添加
+      if (tasks.some(t => t.id === task.id)) {
+        return tasks;
+      }
+      // 按創建時間排序，新任務在頂部
+      return [task, ...tasks];
+    });
   }
 
   /**

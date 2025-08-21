@@ -30,7 +30,14 @@
       "Bash(npx ng test:*)",
       "Bash(dotnet test:*)",
       "Bash(copy:*)",
-      "Bash(ng serve:*)"
+      "Bash(ng serve:*)",
+      "Bash(timeout:*)",
+      "Bash(dotnet build:*)",
+      "Bash(npm test:*)",
+      "Bash(npm test:*)",
+      "Bash(npm start)",
+      "Bash(npx cucumber-js:*)",
+      "Bash(ng test:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,8 @@
+schema: 1
+story: '1.1'
+gate: PASS
+status_reason: '前後端開發環境成功建立，所有測試通過，技術架構符合設計規範。'
+reviewer: 'Quinn'
+updated: '2025-08-21T16:25:00Z'
+top_issues: []
+waiver: { active: false }
