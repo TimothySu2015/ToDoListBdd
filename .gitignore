@@ -1,0 +1,257 @@
+# =============================================================================
+# ToDoList BDD 專案 .gitignore
+# 支援：.NET 9, Angular 19, BDD Testing, SQLite
+# =============================================================================
+
+# =============================================================================
+# .NET / C# 編譯輸出
+# =============================================================================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# =============================================================================
+# Visual Studio / Visual Studio Code
+# =============================================================================
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# =============================================================================
+# ASP.NET Core / Entity Framework
+# =============================================================================
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Entity Framework Migrations (除了實際的遷移文件)
+**/Migrations/*
+!**/Migrations/*.cs
+
+# =============================================================================
+# Database Files
+# =============================================================================
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+todolist.db
+
+# =============================================================================
+# Test Results
+# =============================================================================
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# BDD Test Reports
+cucumber-report.html
+cucumber-report.json
+
+# Coverage reports
+coverage/
+*.lcov
+
+# =============================================================================
+# Node.js / Angular
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Angular specific
+dist/
+tmp/
+out-tsc/
+/bazel-out
+
+# Angular CLI cache
+.angular/
+
+# =============================================================================
+# Package managers
+# =============================================================================
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+nuget.exe
+
+# =============================================================================
+# Environment and Configuration
+# =============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Secrets
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# =============================================================================
+# IDE and Editor files
+# =============================================================================
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Sublime Text
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# =============================================================================
+# Operating System
+# =============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Linux
+*~
+
+# =============================================================================
+# Logs and temporary files
+# =============================================================================
+*.log
+*.tmp
+*.temp
+*.pid
+*.swp
+*.swo
+
+# =============================================================================
+# Backup files
+# =============================================================================
+*.bak
+*.backup
+*.orig
+*.rej
+
+# =============================================================================
+# BMAD Framework (保留重要配置，排除臨時文件)
+# =============================================================================
+# 保留 .bmad-core/ 目錄中的重要文件
+# 只排除可能的臨時或生成文件
+**/.bmad-temp/
+**/.bmad-cache/
+
+# =============================================================================
+# Claude Code IDE
+# =============================================================================
+.claude/temp/
+.claude/cache/
+
+# =============================================================================
+# 專案特定排除
+# =============================================================================
+# 靜態資源編譯結果
+**/staticwebassets/
+**/staticwebassets.removed.txt
+
+# SpecFlow 生成文件（保留手寫的 .feature 文件，排除生成的 .cs 文件可以選擇性保留）
+# **/*.feature.cs
+
+# 工作流程臨時文件
+.github/workflows/temp/
+
+# =============================================================================
+# 保留重要文件（確保不被意外忽略）
+# =============================================================================
+# 強制包含重要的配置和文件
+!.gitignore
+!.github/chatmodes/
+!.bmad-core/
+!docs/
+!src/
+
+# 確保重要的設定檔案不被忽略
+!*.csproj
+!*.sln
+!package.json
+!angular.json
+!tsconfig.json
+!*.feature
