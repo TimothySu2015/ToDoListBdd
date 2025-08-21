@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>{{ title() }}</h1>
+  
+  <div class="api-status">
+    <h2>後端 API 連線狀態</h2>
+    <p>狀態: <span [class]="apiStatus() === '連線正常' ? 'status-success' : 'status-error'">{{ apiStatus() }}</span></p>
+    
+    @if (apiResponse()) {
+      <div class="api-response">
+        <h3>API 回應:</h3>
+        <pre>{{ apiResponse() | json }}</pre>
+      </div>
+    }
+    
+    <button (click)="checkApiHealth()" class="btn-refresh">重新檢查連線</button>
+  </div>
+
+  <router-outlet />
+</div>
