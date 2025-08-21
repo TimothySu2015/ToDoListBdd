@@ -1,19 +1,54 @@
 <div class="container">
-  <h1>{{ title() }}</h1>
+  <header class="app-header">
+    <h1>{{ title() }}</h1>
+    <p class="app-subtitle">高效的待辦事項管理工具</p>
+  </header>
   
-  <div class="api-status">
-    <h2>後端 API 連線狀態</h2>
-    <p>狀態: <span [class]="apiStatus() === '連線正常' ? 'status-success' : 'status-error'">{{ apiStatus() }}</span></p>
+  <!-- API 連線狀態區域 -->
+  <div class="api-status" [class.collapsed]="apiStatus() === '連線正常'">
+    <div class="status-header" (click)="toggleApiStatus()">
+      <h3>API 連線狀態</h3>
+      <span [class]="apiStatus() === '連線正常' ? 'status-success' : 'status-error'">
+        {{ apiStatus() }}
+      </span>
+    </div>
     
-    @if (apiResponse()) {
-      <div class="api-response">
-        <h3>API 回應:</h3>
-        <pre>{{ apiResponse() | json }}</pre>
+    @if (!isApiStatusCollapsed() || apiStatus() !== '連線正常') {
+      <div class="status-details">
+        @if (apiResponse()) {
+          <div class="api-response">
+            <pre>{{ apiResponse() | json }}</pre>
+          </div>
+        }
+        <button (click)="checkApiHealth()" class="btn-refresh">重新檢查連線</button>
       </div>
     }
-    
-    <button (click)="checkApiHealth()" class="btn-refresh">重新檢查連線</button>
   </div>
+
+  <!-- 主要待辦清單功能區域 -->
+  @if (apiStatus() === '連線正常') {
+    <main class="todo-main">
+      <!-- 新增任務區域 -->
+      <section class="task-input-section">
+        <app-task-input></app-task-input>
+      </section>
+      
+      <!-- 檢視切換器 -->
+      <section class="task-view-section">
+        <app-task-view-switcher></app-task-view-switcher>
+      </section>
+      
+      <!-- 任務列表區域 -->
+      <section class="task-list-section">
+        <app-task-list></app-task-list>
+      </section>
+    </main>
+  } @else {
+    <div class="offline-message">
+      <h3>⚠️ 無法連接到後端服務</h3>
+      <p>請確保後端 API 服務正在運行，然後重新檢查連線。</p>
+    </div>
+  }
 
   <router-outlet />
 </div>
