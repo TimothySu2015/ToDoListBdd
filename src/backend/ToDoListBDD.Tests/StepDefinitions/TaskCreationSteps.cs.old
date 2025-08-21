@@ -1,0 +1,162 @@
+using TechTalk.SpecFlow;
+using Xunit;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.DependencyInjection;
+using ToDoListBDD.API.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text;
+using ToDoListBDD.API.DomainEntities;
+
+namespace ToDoListBDD.Tests.StepDefinitions;
+
+public class CustomWebApplicationFactory : WebApplicationFactory<Program>
+{
+    protected override void ConfigureWebHost(Microsoft.AspNetCore.Hosting.IWebHostBuilder builder)
+    {
+        builder.ConfigureServices(services =>
+        {
+            // 移除所有現有的 DbContext 註冊
+            var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>));
+            if (descriptor != null)
+            {
+                services.Remove(descriptor);
+            }
+
+            // 新增 InMemory 資料庫
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseInMemoryDatabase($"TestDb_{Guid.NewGuid()}");
+            });
+
+            // 建立 ServiceProvider 並確保資料庫被初始化
+            var serviceProvider = services.BuildServiceProvider();
+            using (var scope = serviceProvider.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                context.Database.EnsureCreated();
+            }
+        });
+    }
+}
+
+[Binding]
+public class TaskCreationSteps : IClassFixture<CustomWebApplicationFactory>
+{
+    private readonly CustomWebApplicationFactory _factory;
+    private readonly HttpClient _client;
+    private HttpResponseMessage? _response;
+    private string? _requestDescription;
+    private TodoTask? _createdTask;
+
+    public TaskCreationSteps(CustomWebApplicationFactory factory)
+    {
+        _factory = factory;
+        _client = _factory.CreateClient();
+    }
+
+    [Given(@"系統已準備好接收新任務")]
+    public async Task GivenSystemIsReadyToReceiveNewTasks()
+    {
+        // 系統已經在 Factory 中準備好了，這裡不需要額外操作
+        await Task.CompletedTask;
+    }
+
+    [When(@"我提交一個新任務 ""(.*)""")]
+    public async Task WhenISubmitANewTask(string description)
+    {
+        _requestDescription = description;
+        var requestBody = JsonSerializer.Serialize(new { Description = description });
+        var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+        
+        _response = await _client.PostAsync("/api/tasks", content);
+    }
+
+    [When(@"我提交一個空白任務描述")]
+    public async Task WhenISubmitAnEmptyTaskDescription()
+    {
+        _requestDescription = "";
+        var requestBody = JsonSerializer.Serialize(new { Description = "" });
+        var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+        
+        _response = await _client.PostAsync("/api/tasks", content);
+    }
+
+    [When(@"我提交一個超過500字元的任務描述")]
+    public async Task WhenISubmitATaskDescriptionOver500Characters()
+    {
+        _requestDescription = new string('A', 501);
+        var requestBody = JsonSerializer.Serialize(new { Description = _requestDescription });
+        var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+        
+        _response = await _client.PostAsync("/api/tasks", content);
+    }
+
+    [Then(@"任務應該成功建立")]
+    public async Task ThenTaskShouldBeCreatedSuccessfully()
+    {
+        Assert.NotNull(_response);
+        Assert.Equal(System.Net.HttpStatusCode.Created, _response.StatusCode);
+        
+        var responseBody = await _response.Content.ReadAsStringAsync();
+        _createdTask = JsonSerializer.Deserialize<TodoTask>(responseBody, new JsonSerializerOptions 
+        { 
+            PropertyNameCaseInsensitive = true 
+        });
+        
+        Assert.NotNull(_createdTask);
+        Assert.True(_createdTask.Id > 0);
+    }
+
+    [Then(@"任務描述應該是 ""(.*)""")]
+    public void ThenTaskDescriptionShouldBe(string expectedDescription)
+    {
+        Assert.NotNull(_createdTask);
+        Assert.Equal(expectedDescription, _createdTask.Description);
+    }
+
+    [Then(@"任務狀態應該是未完成")]
+    public void ThenTaskStatusShouldBeIncomplete()
+    {
+        Assert.NotNull(_createdTask);
+        Assert.False(_createdTask.IsCompleted);
+    }
+
+    [Then(@"任務應該有建立時間")]
+    public void ThenTaskShouldHaveCreatedTime()
+    {
+        Assert.NotNull(_createdTask);
+        Assert.True(_createdTask.CreatedAt != default);
+        Assert.True(_createdTask.UpdatedAt != default);
+    }
+
+    [Then(@"應該回傳驗證錯誤")]
+    public void ThenShouldReturnValidationError()
+    {
+        Assert.NotNull(_response);
+        Assert.Equal(System.Net.HttpStatusCode.BadRequest, _response.StatusCode);
+    }
+
+    [Then(@"錯誤訊息應該是 ""(.*)""")]
+    public async Task ThenErrorMessageShouldBe(string expectedMessage)
+    {
+        Assert.NotNull(_response);
+        var responseBody = await _response.Content.ReadAsStringAsync();
+        Assert.Contains(expectedMessage, responseBody);
+    }
+
+    [Then(@"任務應該儲存到資料庫")]
+    public async Task ThenTaskShouldBeSavedToDatabase()
+    {
+        Assert.NotNull(_createdTask);
+        
+        // 重新從資料庫查詢以確認持久化
+        using var scope = _factory.Services.CreateScope();
+        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        
+        var savedTask = await context.Set<TodoTask>().FindAsync(_createdTask.Id);
+        Assert.NotNull(savedTask);
+        Assert.Equal(_requestDescription, savedTask.Description);
+        Assert.False(savedTask.IsCompleted);
+    }
+}

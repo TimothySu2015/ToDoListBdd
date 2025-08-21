@@ -1,0 +1,63 @@
+<div class="task-input-container">
+  <div class="input-wrapper">
+    <input
+      type="text"
+      [ngClass]="getInputClasses()"
+      [value]="taskDescription()"
+      (input)="onInputChange($any($event.target).value)"
+      (keypress)="onKeyPress($event)"
+      placeholder="輸入新任務..."
+      maxlength="500"
+      [disabled]="isSubmitting()"
+      data-testid="task-input"
+    />
+    
+    <button
+      type="button"
+      [ngClass]="getButtonClasses()"
+      (click)="onAddClick()"
+      [disabled]="!canSubmit()"
+      data-testid="add-task-button"
+    >
+      <span *ngIf="!isSubmitting()" class="button-text">新增</span>
+      <span *ngIf="isSubmitting()" class="button-loading">
+        <span class="loading-spinner"></span>
+        新增中...
+      </span>
+    </button>
+  </div>
+
+  <!-- 驗證錯誤訊息 -->
+  <div 
+    *ngIf="validationError()" 
+    class="error-message"
+    data-testid="validation-error"
+  >
+    {{ validationError() }}
+  </div>
+
+  <!-- 網路錯誤訊息 -->
+  <div 
+    *ngIf="taskService.error()" 
+    class="error-message network-error"
+    data-testid="network-error"
+  >
+    {{ taskService.error() }}
+    <button 
+      type="button" 
+      class="retry-button"
+      (click)="taskService.clearError()"
+    >
+      重試
+    </button>
+  </div>
+
+  <!-- 載入指示器 -->
+  <div 
+    *ngIf="taskService.loading()" 
+    class="loading-indicator"
+    data-testid="loading-indicator"
+  >
+    <div class="loading-bar"></div>
+  </div>
+</div>

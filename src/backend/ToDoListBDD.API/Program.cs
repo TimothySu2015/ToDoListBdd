@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using ToDoListBDD.API.Infrastructure.Data;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Add MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+// Add FluentValidation
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -38,3 +42,6 @@ app.UseCors("AllowFrontend");
 app.MapControllers();
 
 app.Run();
+
+// 讓 Program 類可被測試專案存取
+public partial class Program { }

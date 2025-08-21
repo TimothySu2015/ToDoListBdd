@@ -35,6 +35,8 @@
     "@angular/build": "^20.1.0",
     "@angular/cli": "^20.1.0",
     "@angular/compiler-cli": "^20.1.0",
+    "@cucumber/cucumber": "^12.1.0",
+    "@cucumber/html-formatter": "^21.14.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "20.1.1",
     "eslint": "^9.29.0",

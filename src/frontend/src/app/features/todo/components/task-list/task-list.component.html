@@ -1,0 +1,138 @@
+<div class="task-list-container">
+  <!-- 任務計數器 -->
+  <div class="task-counter" data-testid="task-counter">
+    <h2>待辦任務</h2>
+    <div class="task-counts">
+      <span class="pending-count">
+        {{ taskService.pendingTaskCount() }} 個待辦任務
+      </span>
+      <span class="separator">·</span>
+      <span class="completed-count">
+        {{ taskService.completedTaskCount() }} 個已完成
+      </span>
+    </div>
+  </div>
+
+  <!-- 載入指示器 -->
+  <div 
+    *ngIf="taskService.loading()" 
+    class="loading-container"
+    data-testid="loading-container"
+  >
+    <div class="loading-spinner-large"></div>
+    <p>載入任務中...</p>
+  </div>
+
+  <!-- 錯誤訊息 -->
+  <div 
+    *ngIf="hasError()" 
+    class="error-container"
+    data-testid="error-container"
+  >
+    <div class="error-icon">⚠️</div>
+    <div class="error-content">
+      <h3>載入失敗</h3>
+      <p>{{ taskService.error() }}</p>
+      <button 
+        type="button" 
+        class="retry-button"
+        (click)="retry()"
+        data-testid="retry-button"
+      >
+        重新載入
+      </button>
+    </div>
+  </div>
+
+  <!-- 空狀態 -->
+  <div 
+    *ngIf="isEmpty() && !taskService.loading() && !hasError()" 
+    class="empty-state"
+    data-testid="empty-state"
+  >
+    <div class="empty-icon">📝</div>
+    <h3>還沒有任務</h3>
+    <p>開始新增您的第一個待辦任務吧！</p>
+  </div>
+
+  <!-- 任務列表 -->
+  <div 
+    *ngIf="!isEmpty() && !hasError()" 
+    class="task-list"
+    data-testid="task-list"
+  >
+    <div 
+      *ngFor="let task of taskService.tasks(); trackBy: trackByTaskId; index as i" 
+      class="task-item"
+      [class.completed]="task.isCompleted"
+      [class.completing]="isTaskAnimating(task.id, 'completing')"
+      [class.uncompleting]="isTaskAnimating(task.id, 'uncompleting')"
+      [attr.data-testid]="'task-item-' + task.id"
+      [attr.data-index]="i"
+      tabindex="0"
+      (keydown)="onTaskItemKeydown($event, task)"
+    >
+      <div class="task-content">
+        <div class="task-checkbox"
+             [class.checked]="task.isCompleted"
+             [class.completing]="isTaskAnimating(task.id, 'completing')"
+             [class.uncompleting]="isTaskAnimating(task.id, 'uncompleting')"
+             (click)="onTaskStatusToggle(task)"
+             data-testid="task-checkbox"
+             role="checkbox"
+             [attr.aria-checked]="task.isCompleted"
+             tabindex="0"
+             (keydown)="onCheckboxKeydown($event, task)">
+          <div class="checkbox-indicator">
+            <span *ngIf="task.isCompleted" class="checkmark">✓</span>
+          </div>
+        </div>
+        
+        <div class="task-details">
+          <p class="task-description task-text" 
+             [class.completed-text]="task.isCompleted"
+             [title]="task.description">
+            {{ task.description }}
+          </p>
+          <div class="task-meta">
+            <span class="task-time">{{ formatDate(task.createdAt) }}</span>
+            <span class="task-id">ID: {{ task.id }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新任務標記 (前3個任務顯示) -->
+      <div 
+        *ngIf="i < 3" 
+        class="new-task-badge"
+        data-testid="new-task-badge"
+      >
+        新增
+      </div>
+    </div>
+  </div>
+
+  <!-- 列表底部資訊 -->
+  <div 
+    *ngIf="!isEmpty() && !hasError()" 
+    class="list-footer"
+    data-testid="list-footer"
+  >
+    <p class="list-info">
+      共 {{ taskService.taskCount() }} 項任務
+      <span *ngIf="taskService.incompleteTasks().length > 0">
+        · {{ taskService.incompleteTasks().length }} 項待完成
+      </span>
+    </p>
+    
+    <button 
+      type="button" 
+      class="refresh-button"
+      (click)="reloadTasks()"
+      [disabled]="taskService.loading()"
+      data-testid="refresh-button"
+    >
+      🔄 重新整理
+    </button>
+  </div>
+</div>

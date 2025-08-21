@@ -22,7 +22,15 @@
       "Bash(npm run build:*)",
       "Bash(powershell:*)",
       "Bash(dir /s)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(dir:*)",
+      "Bash(dotnet add package:*)",
+      "Bash(dotnet ef migrations:*)",
+      "Bash(npm install:*)",
+      "Bash(npx ng test:*)",
+      "Bash(dotnet test:*)",
+      "Bash(copy:*)",
+      "Bash(ng serve:*)"
     ],
     "deny": [],
     "ask": []
