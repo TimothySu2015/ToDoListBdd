@@ -118,22 +118,28 @@ graph TB
 採用 **功能模組化 + 服務分層** 模式，支援 BDD Story 驅動的漸進式開發：
 
 ```
-src/
-├── app/
-│   ├── core/                 # 核心模組 (單例服務)
-│   │   ├── services/         # API 服務、HTTP 攔截器
-│   │   ├── guards/           # 路由守衛
-│   │   └── interceptors/     # HTTP 攔截器
-│   ├── shared/               # 共用模組
-│   │   ├── components/       # 可重用元件
-│   │   ├── pipes/            # 管道
-│   │   └── directives/       # 指令
-│   ├── features/             # 功能模組 (依 Story 需求動態建立)
-│   │   └── todo/             # 待辦事項功能 (Epic 1 開始建立)
-│   │       ├── components/   # Todo 相關元件 (依 Story 需求新增)
-│   │       ├── services/     # Todo 狀態管理 (依 API 需求建立)
-│   │       └── models/       # TypeScript 介面 (依 BDD 場景定義)
-│   └── layout/               # 佈局元件
+src/frontend/
+├── src/
+│   ├── app/
+│   │   ├── core/                 # 核心模組 (單例服務)
+│   │   │   ├── services/         # API 服務、HTTP 攔截器
+│   │   │   ├── guards/           # 路由守衛
+│   │   │   └── interceptors/     # HTTP 攔截器
+│   │   ├── shared/               # 共用模組
+│   │   │   ├── components/       # 可重用元件
+│   │   │   ├── pipes/            # 管道
+│   │   │   └── directives/       # 指令
+│   │   ├── features/             # 功能模組 (依 Story 需求動態建立)
+│   │   │   └── todo/             # 待辦事項功能 (Epic 1 開始建立)
+│   │   │       ├── components/   # Todo 相關元件 (依 Story 需求新增)
+│   │   │       ├── services/     # Todo 狀態管理 (依 API 需求建立)
+│   │   │       └── models/       # TypeScript 介面 (依 BDD 場景定義)
+│   │   └── layout/               # 佈局元件
+│   ├── assets/                   # 靜態資源
+│   └── environments/             # 環境配置
+├── angular.json                  # Angular CLI 配置
+├── package.json                  # 相依套件定義
+└── tsconfig.json                 # TypeScript 配置
 ```
 
 ### 元件架構指導原則
@@ -197,24 +203,33 @@ export class ApiService {
 支援 BDD Story 驅動的漸進式開發：
 
 ```
-ToDoListBDD.API/
-├── Controllers/              # API 控制器 (依 Story API 需求建立)
+src/backend/
+├── ToDoListBDD.API/          # 主要 API 專案
+│   ├── Controllers/          # API 控制器 (依 Story API 需求建立)
+│   ├── Program.cs            # 應用程式進入點
+│   ├── appsettings.json      # 應用程式設定
+│   └── ToDoListBDD.API.csproj # 專案檔
 ├── Application/              # 應用層 (CQRS)
 │   ├── Commands/             # 命令及處理器 (依 BDD 場景建立)
 │   ├── Queries/              # 查詢及處理器 (依 BDD 場景建立)
 │   ├── DTOs/                 # 資料傳輸物件 (依 API 契約建立)
-│   └── Interfaces/           # 應用介面 (依需求定義)
+│   ├── Interfaces/           # 應用介面 (依需求定義)
+│   └── Application.csproj    # 應用層專案檔
 ├── Domain/                   # 領域層
 │   ├── Entities/             # 實體 (依 BDD 場景的資料需求建立)
 │   ├── Enums/                # 列舉 (依業務邏輯需求建立)
-│   └── Exceptions/           # 領域例外 (依驗證需求建立)
+│   ├── Exceptions/           # 領域例外 (依驗證需求建立)
+│   └── Domain.csproj         # 領域層專案檔
 ├── Infrastructure/           # 基礎設施層
 │   ├── Data/                 # EF Core 配置 (依資料需求建立)
 │   ├── Repositories/         # 資料存取 (依 CQRS 需求建立)
-│   └── Services/             # 外部服務 (依整合需求建立)
-└── Presentation/            # 展示層
-    ├── Filters/             # 過濾器
-    └── Middleware/          # 中介軟體
+│   ├── Services/             # 外部服務 (依整合需求建立)
+│   └── Infrastructure.csproj # 基礎設施層專案檔
+├── Tests/                    # 測試專案
+│   ├── UnitTests/            # 單元測試
+│   ├── IntegrationTests/     # 整合測試
+│   └── BDDTests/             # BDD 測試 (SpecFlow)
+└── ToDoListBDD.sln           # 解決方案檔
 ```
 
 ### CQRS 實作指導原則
@@ -482,7 +497,7 @@ public class TaskManagementSteps
 ### 開發環境配置
 
 ```dockerfile
-# Dockerfile.frontend
+# src/frontend/Dockerfile
 FROM node:20-alpine as build
 WORKDIR /app
 COPY package*.json ./
@@ -493,12 +508,15 @@ RUN npm run build
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+EXPOSE 4200
 
-# Dockerfile.backend
+# src/backend/Dockerfile
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 COPY ["ToDoListBDD.API/ToDoListBDD.API.csproj", "ToDoListBDD.API/"]
+COPY ["Application/Application.csproj", "Application/"]
+COPY ["Domain/Domain.csproj", "Domain/"]
+COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
 RUN dotnet restore "ToDoListBDD.API/ToDoListBDD.API.csproj"
 COPY . .
 RUN dotnet build "ToDoListBDD.API/ToDoListBDD.API.csproj" -c Release -o /app/build
@@ -522,10 +540,10 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./src/frontend
       dockerfile: Dockerfile
     ports:
-      - "4200:80"
+      - "4200:4200"
     depends_on:
       - backend
     environment:
@@ -533,7 +551,7 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./src/backend
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
