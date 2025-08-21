@@ -14,7 +14,7 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+
         // TodoTask 實體配置
         modelBuilder.Entity<TodoTask>(entity =>
         {

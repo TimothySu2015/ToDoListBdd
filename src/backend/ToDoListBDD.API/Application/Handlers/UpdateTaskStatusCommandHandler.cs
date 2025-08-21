@@ -18,7 +18,7 @@ public class UpdateTaskStatusCommandHandler : IRequestHandler<UpdateTaskStatusCo
     public async Task<TaskDto> Handle(UpdateTaskStatusCommand request, CancellationToken cancellationToken)
     {
         var task = await _context.Tasks.FindAsync(new object[] { request.TaskId }, cancellationToken);
-        
+
         if (task == null)
         {
             throw new ArgumentException($"找不到 ID 為 {request.TaskId} 的任務");
