@@ -1,7 +1,23 @@
 <div class="container">
   <header class="app-header">
-    <h1>{{ title() }}</h1>
-    <p class="app-subtitle">高效的待辦事項管理工具</p>
+    <div class="header-content">
+      <div class="title-section">
+        <h1>{{ title() }}</h1>
+        <p class="app-subtitle">高效的待辦事項管理工具</p>
+      </div>
+      <div class="header-actions">
+        <button 
+          class="help-button"
+          (click)="showKeyboardHelp()"
+          title="快捷鍵說明 (Ctrl+? 或 F1)"
+          [attr.data-testid]="'keyboard-help-button'"
+          aria-label="顯示鍵盤快捷鍵說明"
+        >
+          <span class="help-icon">❓</span>
+          <span class="help-text">快捷鍵</span>
+        </button>
+      </div>
+    </div>
   </header>
   
   <!-- API 連線狀態區域 -->

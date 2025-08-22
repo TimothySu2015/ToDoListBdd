@@ -1,23 +1,25 @@
-import { Component, computed, signal, HostListener, ViewChild, OnInit, inject, effect } from '@angular/core';
+import { Component, computed, signal, HostListener, ViewChild, OnInit, OnDestroy, inject, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskService } from '../../services/task.service';
 import { ViewStateService } from '../../services/view-state.service';
 import { SearchService } from '../../services/search.service';
+import { KeyboardShortcutService } from '../../services/keyboard-shortcut.service';
 import { Task, TaskViewType } from '../../models/task.interface';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { ToastNotificationComponent } from '../toast-notification/toast-notification.component';
 import { TaskSearchComponent } from '../task-search/task-search.component';
 import { TaskHighlightComponent } from '../task-highlight/task-highlight.component';
 import { ClearCompletedComponent } from '../clear-completed/clear-completed.component';
+import { ShortcutHelpComponent } from '../shortcut-help/shortcut-help.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule, ConfirmDialogComponent, ToastNotificationComponent, TaskSearchComponent, TaskHighlightComponent, ClearCompletedComponent],
+  imports: [CommonModule, ConfirmDialogComponent, ToastNotificationComponent, TaskSearchComponent, TaskHighlightComponent, ClearCompletedComponent, ShortcutHelpComponent],
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent implements OnInit, OnDestroy {
   // 計算屬性
   public readonly isEmpty = computed(() => this.taskService.tasks().length === 0);
   public readonly hasError = computed(() => !!this.taskService.error());
@@ -40,6 +42,7 @@ export class TaskListComponent implements OnInit {
 
   private viewStateService = inject(ViewStateService);
   public searchService = inject(SearchService);
+  private keyboardService = inject(KeyboardShortcutService);
 
   constructor(public taskService: TaskService) {
     // 當檢視狀態改變時，重新載入任務
@@ -52,6 +55,90 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
     // 初始載入當前檢視的任務
     this.loadTasksForCurrentView(this.viewStateService.getCurrentView());
+    
+    // 初始化鍵盤快捷鍵服務
+    this.keyboardService.init();
+    
+    // 監聽任務相關的鍵盤事件
+    this.setupKeyboardEventListeners();
+  }
+
+  ngOnDestroy(): void {
+    // 清理鍵盤快捷鍵服務
+    this.keyboardService.destroy();
+    
+    // 移除事件監聽器
+    this.removeKeyboardEventListeners();
+  }
+
+  /**
+   * 設置鍵盤事件監聽器
+   */
+  private setupKeyboardEventListeners(): void {
+    // 監聽自定義鍵盤事件 - 使用 any 類型來避免 TypeScript 類型檢查問題
+    document.addEventListener('toggleTask', this.handleToggleTask.bind(this) as any);
+    document.addEventListener('editTask', this.handleEditTask.bind(this) as any);
+    document.addEventListener('deleteTask', this.handleDeleteTask.bind(this) as any);
+    document.addEventListener('cancelEdit', this.handleCancelEdit.bind(this) as any);
+  }
+
+  /**
+   * 移除鍵盤事件監聽器
+   */
+  private removeKeyboardEventListeners(): void {
+    document.removeEventListener('toggleTask', this.handleToggleTask.bind(this) as any);
+    document.removeEventListener('editTask', this.handleEditTask.bind(this) as any);
+    document.removeEventListener('deleteTask', this.handleDeleteTask.bind(this) as any);
+    document.removeEventListener('cancelEdit', this.handleCancelEdit.bind(this) as any);
+  }
+
+  /**
+   * 處理切換任務狀態事件
+   */
+  private handleToggleTask(event: Event): void {
+    const customEvent = event as CustomEvent;
+    const taskId = customEvent.detail?.taskId;
+    if (taskId) {
+      const task = this.taskService.tasks().find(t => t.id === taskId);
+      if (task) {
+        this.onTaskStatusToggle(task);
+      }
+    }
+  }
+
+  /**
+   * 處理編輯任務事件
+   */
+  private handleEditTask(event: Event): void {
+    const target = event.target as HTMLElement;
+    const taskId = target?.dataset['taskId'];
+    if (taskId) {
+      const task = this.taskService.tasks().find(t => t.id === parseInt(taskId));
+      if (task) {
+        this.startEditing(task);
+      }
+    }
+  }
+
+  /**
+   * 處理刪除任務事件
+   */
+  private handleDeleteTask(event: Event): void {
+    const customEvent = event as CustomEvent;
+    const taskId = customEvent.detail?.taskId;
+    if (taskId) {
+      const task = this.taskService.tasks().find(t => t.id === taskId);
+      if (task) {
+        this.showDeleteDialog(task);
+      }
+    }
+  }
+
+  /**
+   * 處理取消編輯事件
+   */
+  private handleCancelEdit(event: Event): void {
+    this.cancelEditing();
   }
 
   /**

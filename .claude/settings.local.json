@@ -39,7 +39,8 @@
       "Bash(npx cucumber-js:*)",
       "Bash(ng test:*)",
       "Bash(ng build:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run test:*)"
     ],
     "deny": [],
     "ask": []

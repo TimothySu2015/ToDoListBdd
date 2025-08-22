@@ -20,6 +20,12 @@ export class App implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
+  showKeyboardHelp(): void {
+    // 觸發快捷鍵說明對話框
+    const helpEvent = new CustomEvent('showShortcutHelp');
+    document.dispatchEvent(helpEvent);
+  }
+
   ngOnInit(): void {
     this.checkApiHealth();
   }

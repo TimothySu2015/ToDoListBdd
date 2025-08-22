@@ -1,0 +1,8 @@
+schema: 1
+story: '3.4'
+gate: PASS
+status_reason: '所有驗收標準已完成，BDD測試全部通過，鍵盤快捷鍵功能運行正常，瀏覽器相容性良好。'
+reviewer: 'Quinn'
+updated: '2025-08-22T13:15:00Z'
+top_issues: []
+waiver: { active: false }
