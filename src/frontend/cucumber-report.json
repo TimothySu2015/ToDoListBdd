@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 216300
+              "duration": 216199
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 222499
+              "duration": 277700
             }
           },
           {
@@ -31,11 +31,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 6628399
+              "duration": 7234500
             }
           },
           {
@@ -77,11 +77,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 697200
+              "duration": 745200
             }
           },
           {
@@ -90,11 +90,11 @@
             "line": 16,
             "name": "我將滑鼠懸停在任務 \"完成專案報告\" 上",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:56"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:56"
             },
             "result": {
               "status": "passed",
-              "duration": 2526700
+              "duration": 2519900
             }
           },
           {
@@ -103,11 +103,11 @@
             "line": 17,
             "name": "我應該看到刪除按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:63"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:63"
             },
             "result": {
               "status": "passed",
-              "duration": 450800
+              "duration": 575400
             }
           },
           {
@@ -116,11 +116,11 @@
             "line": 18,
             "name": "刪除按鈕應該有適當的圖示",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:68"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 485400
+              "duration": 482299
             }
           },
           {
@@ -129,11 +129,11 @@
             "line": 19,
             "name": "我將滑鼠移開任務項目",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:73"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:73"
             },
             "result": {
               "status": "passed",
-              "duration": 326999
+              "duration": 342499
             }
           },
           {
@@ -142,11 +142,11 @@
             "line": 20,
             "name": "刪除按鈕應該隱藏",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:77"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:77"
             },
             "result": {
               "status": "passed",
-              "duration": 349100
+              "duration": 327500
             }
           },
           {
@@ -154,7 +154,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 274399
+              "duration": 386600
             }
           },
           {
@@ -162,7 +162,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 63799
+              "duration": 151299
             }
           }
         ],
@@ -181,7 +181,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60799
+              "duration": 61399
             }
           },
           {
@@ -189,7 +189,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 334500
+              "duration": 341399
             }
           },
           {
@@ -198,11 +198,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 109799
+              "duration": 118199
             }
           },
           {
@@ -244,11 +244,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 139099
+              "duration": 152000
             }
           },
           {
@@ -257,11 +257,11 @@
             "line": 23,
             "name": "我懸停在任務 \"完成專案報告\" 上",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:83"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:83"
             },
             "result": {
               "status": "passed",
-              "duration": 1502700
+              "duration": 1277600
             }
           },
           {
@@ -270,11 +270,11 @@
             "line": 24,
             "name": "我點擊刪除按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:88"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:88"
             },
             "result": {
               "status": "passed",
-              "duration": 424100
+              "duration": 455100
             }
           },
           {
@@ -283,11 +283,11 @@
             "line": 25,
             "name": "我應該看到確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:92"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:92"
             },
             "result": {
               "status": "passed",
-              "duration": 361200
+              "duration": 363900
             }
           },
           {
@@ -296,11 +296,11 @@
             "line": 26,
             "name": "確認對話框應該是可見的",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:96"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:96"
             },
             "result": {
               "status": "passed",
-              "duration": 326700
+              "duration": 317900
             }
           },
           {
@@ -308,7 +308,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 220600
+              "duration": 230099
             }
           },
           {
@@ -316,7 +316,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37199
+              "duration": 22700
             }
           }
         ],
@@ -335,7 +335,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 41299
+              "duration": 43800
             }
           },
           {
@@ -343,7 +343,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 214400
+              "duration": 264799
             }
           },
           {
@@ -352,11 +352,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 65599
+              "duration": 83499
             }
           },
           {
@@ -398,11 +398,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 117799
+              "duration": 112900
             }
           },
           {
@@ -411,11 +411,11 @@
             "line": 29,
             "name": "我點擊任務 \"完成專案報告\" 的刪除按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:101"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:101"
             },
             "result": {
               "status": "passed",
-              "duration": 1101399
+              "duration": 961100
             }
           },
           {
@@ -424,11 +424,11 @@
             "line": 30,
             "name": "確認對話框顯示",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:107"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:107"
             },
             "result": {
               "status": "passed",
-              "duration": 269199
+              "duration": 306399
             }
           },
           {
@@ -437,11 +437,11 @@
             "line": 31,
             "name": "對話框應該包含任務描述 \"完成專案報告\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:111"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:111"
             },
             "result": {
               "status": "passed",
-              "duration": 1122599
+              "duration": 1041599
             }
           },
           {
@@ -450,11 +450,11 @@
             "line": 32,
             "name": "對話框應該有 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
             },
             "result": {
               "status": "passed",
-              "duration": 1966799
+              "duration": 1525299
             }
           },
           {
@@ -463,11 +463,11 @@
             "line": 33,
             "name": "對話框應該有 \"取消\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:115"
             },
             "result": {
               "status": "passed",
-              "duration": 206599
+              "duration": 228600
             }
           },
           {
@@ -475,7 +475,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 475100
+              "duration": 203899
             }
           },
           {
@@ -483,7 +483,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53300
+              "duration": 48200
             }
           }
         ],
@@ -502,7 +502,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 41099
+              "duration": 41200
             }
           },
           {
@@ -510,7 +510,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 177799
+              "duration": 192399
             }
           },
           {
@@ -519,11 +519,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 92799
+              "duration": 70800
             }
           },
           {
@@ -565,11 +565,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 61799
+              "duration": 53300
             }
           },
           {
@@ -578,11 +578,11 @@
             "line": 36,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 1262799
+              "duration": 880700
             }
           },
           {
@@ -591,11 +591,11 @@
             "line": 37,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 870999
+              "duration": 772399
             }
           },
           {
@@ -604,11 +604,11 @@
             "line": 38,
             "name": "任務 \"完成專案報告\" 應該從任務列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:150"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:150"
             },
             "result": {
               "status": "passed",
-              "duration": 1073200
+              "duration": 904300
             }
           },
           {
@@ -617,11 +617,11 @@
             "line": 39,
             "name": "確認對話框應該關閉",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
             },
             "result": {
               "status": "passed",
-              "duration": 262300
+              "duration": 250299
             }
           },
           {
@@ -630,11 +630,11 @@
             "line": 40,
             "name": "任務列表應該更新",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:159"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:159"
             },
             "result": {
               "status": "passed",
-              "duration": 241600
+              "duration": 233999
             }
           },
           {
@@ -642,7 +642,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 468499
+              "duration": 436999
             }
           },
           {
@@ -650,7 +650,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23400
+              "duration": 17600
             }
           }
         ],
@@ -669,7 +669,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56000
+              "duration": 213299
             }
           },
           {
@@ -677,7 +677,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 305200
+              "duration": 257099
             }
           },
           {
@@ -686,11 +686,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 109000
+              "duration": 6913599
             }
           },
           {
@@ -732,11 +732,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 49199
+              "duration": 1043499
             }
           },
           {
@@ -745,11 +745,11 @@
             "line": 43,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 210100
+              "duration": 3626800
             }
           },
           {
@@ -758,11 +758,11 @@
             "line": 44,
             "name": "我點擊 \"取消\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 111499
+              "duration": 2147100
             }
           },
           {
@@ -771,11 +771,11 @@
             "line": 45,
             "name": "確認對話框應該關閉",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
             },
             "result": {
               "status": "passed",
-              "duration": 51100
+              "duration": 755899
             }
           },
           {
@@ -784,11 +784,11 @@
             "line": 46,
             "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
             },
             "result": {
               "status": "passed",
-              "duration": 1040499
+              "duration": 1269000
             }
           },
           {
@@ -796,7 +796,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 125600
+              "duration": 293300
             }
           },
           {
@@ -804,7 +804,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43900
+              "duration": 69700
             }
           }
         ],
@@ -823,7 +823,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96700
+              "duration": 70700
             }
           },
           {
@@ -831,7 +831,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 118899
+              "duration": 245399
             }
           },
           {
@@ -840,11 +840,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 61799
+              "duration": 77199
             }
           },
           {
@@ -886,11 +886,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 46900
+              "duration": 72100
             }
           },
           {
@@ -899,11 +899,11 @@
             "line": 49,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 48400
+              "duration": 148900
             }
           },
           {
@@ -912,11 +912,11 @@
             "line": 50,
             "name": "我按下 Escape 鍵",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:169"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:169"
             },
             "result": {
               "status": "passed",
-              "duration": 323499
+              "duration": 286699
             }
           },
           {
@@ -925,11 +925,11 @@
             "line": 51,
             "name": "確認對話框應該關閉",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
             },
             "result": {
               "status": "passed",
-              "duration": 52899
+              "duration": 55900
             }
           },
           {
@@ -938,11 +938,11 @@
             "line": 52,
             "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
             },
             "result": {
               "status": "passed",
-              "duration": 135800
+              "duration": 839399
             }
           },
           {
@@ -950,7 +950,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 121900
+              "duration": 149199
             }
           },
           {
@@ -958,7 +958,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24499
+              "duration": 16899
             }
           }
         ],
@@ -977,7 +977,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35900
+              "duration": 37800
             }
           },
           {
@@ -985,7 +985,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 102799
+              "duration": 133100
             }
           },
           {
@@ -994,11 +994,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 61000
+              "duration": 69499
             }
           },
           {
@@ -1040,11 +1040,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 45299
+              "duration": 39099
             }
           },
           {
@@ -1053,11 +1053,11 @@
             "line": 55,
             "name": "後端 API 可用",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:174"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:174"
             },
             "result": {
               "status": "passed",
-              "duration": 262100
+              "duration": 277300
             }
           },
           {
@@ -1066,11 +1066,11 @@
             "line": 56,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 51600
+              "duration": 46800
             }
           },
           {
@@ -1079,11 +1079,11 @@
             "line": 57,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 46000
+              "duration": 115200
             }
           },
           {
@@ -1092,11 +1092,11 @@
             "line": 58,
             "name": "系統應該發送 DELETE 請求到後端 API",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:178"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:178"
             },
             "result": {
               "status": "passed",
-              "duration": 502799
+              "duration": 434199
             }
           },
           {
@@ -1105,11 +1105,11 @@
             "line": 59,
             "name": "API 請求應該包含正確的任務 ID",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:183"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:183"
             },
             "result": {
               "status": "passed",
-              "duration": 322599
+              "duration": 416799
             }
           },
           {
@@ -1117,7 +1117,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101300
+              "duration": 139799
             }
           },
           {
@@ -1125,7 +1125,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 18399
+              "duration": 16900
             }
           }
         ],
@@ -1144,7 +1144,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31999
+              "duration": 38599
             }
           },
           {
@@ -1152,7 +1152,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 97400
+              "duration": 125299
             }
           },
           {
@@ -1161,11 +1161,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 57600
+              "duration": 70799
             }
           },
           {
@@ -1207,11 +1207,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 42900
+              "duration": 42800
             }
           },
           {
@@ -1220,11 +1220,11 @@
             "line": 62,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 50400
+              "duration": 37100
             }
           },
           {
@@ -1233,11 +1233,11 @@
             "line": 63,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 46800
+              "duration": 32400
             }
           },
           {
@@ -1246,11 +1246,11 @@
             "line": 64,
             "name": "刪除操作成功",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
             },
             "result": {
               "status": "passed",
-              "duration": 233099
+              "duration": 230099
             }
           },
           {
@@ -1259,11 +1259,11 @@
             "line": 65,
             "name": "我應該看到成功訊息 \"任務已成功刪除\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:193"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:193"
             },
             "result": {
               "status": "passed",
-              "duration": 818899
+              "duration": 762700
             }
           },
           {
@@ -1272,11 +1272,11 @@
             "line": 66,
             "name": "成功訊息應該在 3 秒後自動消失",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:197"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:197"
             },
             "result": {
               "status": "passed",
-              "duration": 661599
+              "duration": 580600
             }
           },
           {
@@ -1284,7 +1284,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 107999
+              "duration": 205600
             }
           },
           {
@@ -1292,7 +1292,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 15999
+              "duration": 19099
             }
           }
         ],
@@ -1319,7 +1319,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 115600
+              "duration": 115200
             }
           },
           {
@@ -1328,11 +1328,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 59899
+              "duration": 78800
             }
           },
           {
@@ -1374,11 +1374,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 94200
+              "duration": 45100
             }
           },
           {
@@ -1387,11 +1387,11 @@
             "line": 69,
             "name": "當前任務計數顯示為 \"3 個任務\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:205"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:205"
             },
             "result": {
               "status": "passed",
-              "duration": 916099
+              "duration": 729499
             }
           },
           {
@@ -1400,11 +1400,11 @@
             "line": 70,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 46800
+              "duration": 46900
             }
           },
           {
@@ -1413,11 +1413,11 @@
             "line": 71,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 46000
+              "duration": 35499
             }
           },
           {
@@ -1426,11 +1426,11 @@
             "line": 72,
             "name": "刪除操作成功",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
             },
             "result": {
               "status": "passed",
-              "duration": 25499
+              "duration": 18299
             }
           },
           {
@@ -1439,11 +1439,11 @@
             "line": 73,
             "name": "任務計數器應該更新為 \"2 個任務\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:211"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:211"
             },
             "result": {
               "status": "passed",
-              "duration": 713999
+              "duration": 687700
             }
           },
           {
@@ -1452,11 +1452,11 @@
             "line": 74,
             "name": "計數器更新應該是即時的",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:216"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:216"
             },
             "result": {
               "status": "passed",
-              "duration": 217899
+              "duration": 252300
             }
           },
           {
@@ -1464,7 +1464,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 146200
+              "duration": 139000
             }
           },
           {
@@ -1472,7 +1472,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17100
+              "duration": 15800
             }
           }
         ],
@@ -1491,7 +1491,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43400
+              "duration": 37499
             }
           },
           {
@@ -1499,7 +1499,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 137400
+              "duration": 118199
             }
           },
           {
@@ -1508,11 +1508,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 83199
+              "duration": 65300
             }
           },
           {
@@ -1554,11 +1554,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 112200
+              "duration": 87900
             }
           },
           {
@@ -1567,11 +1567,11 @@
             "line": 77,
             "name": "網路連線中斷",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:221"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:221"
             },
             "result": {
               "status": "passed",
-              "duration": 266099
+              "duration": 262800
             }
           },
           {
@@ -1580,11 +1580,11 @@
             "line": 78,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 48900
+              "duration": 42899
             }
           },
           {
@@ -1593,11 +1593,11 @@
             "line": 79,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 46700
+              "duration": 69000
             }
           },
           {
@@ -1606,11 +1606,11 @@
             "line": 80,
             "name": "我應該看到錯誤訊息 \"刪除失敗，請檢查網路連線\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:225"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:225"
             },
             "result": {
               "status": "passed",
-              "duration": 680799
+              "duration": 732500
             }
           },
           {
@@ -1619,11 +1619,11 @@
             "line": 81,
             "name": "任務 \"完成專案報告\" 應該仍然存在於列表中",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:164"
             },
             "result": {
               "status": "passed",
-              "duration": 63100
+              "duration": 173099
             }
           },
           {
@@ -1632,11 +1632,11 @@
             "line": 82,
             "name": "確認對話框應該關閉",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:155"
             },
             "result": {
               "status": "passed",
-              "duration": 43300
+              "duration": 36900
             }
           },
           {
@@ -1644,7 +1644,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 97899
+              "duration": 123300
             }
           },
           {
@@ -1652,7 +1652,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14799
+              "duration": 13699
             }
           }
         ],
@@ -1671,7 +1671,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 34699
+              "duration": 43800
             }
           },
           {
@@ -1679,7 +1679,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 129100
+              "duration": 143000
             }
           },
           {
@@ -1688,11 +1688,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 72300
+              "duration": 74500
             }
           },
           {
@@ -1734,11 +1734,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 37599
+              "duration": 55500
             }
           },
           {
@@ -1747,11 +1747,11 @@
             "line": 85,
             "name": "我選中任務 \"完成專案報告\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:233"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:233"
             },
             "result": {
               "status": "passed",
-              "duration": 641200
+              "duration": 850800
             }
           },
           {
@@ -1760,11 +1760,11 @@
             "line": 86,
             "name": "我按下 Delete 鍵",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:238"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:238"
             },
             "result": {
               "status": "passed",
-              "duration": 196200
+              "duration": 232999
             }
           },
           {
@@ -1773,11 +1773,11 @@
             "line": 87,
             "name": "我應該看到刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:385"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:385"
             },
             "result": {
               "status": "passed",
-              "duration": 209699
+              "duration": 218100
             }
           },
           {
@@ -1786,11 +1786,11 @@
             "line": 88,
             "name": "對話框應該顯示選中任務的描述",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:244"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:244"
             },
             "result": {
               "status": "passed",
-              "duration": 218399
+              "duration": 208700
             }
           },
           {
@@ -1798,7 +1798,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96299
+              "duration": 143199
             }
           },
           {
@@ -1806,7 +1806,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14300
+              "duration": 13899
             }
           }
         ],
@@ -1825,7 +1825,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23700
+              "duration": 58399
             }
           },
           {
@@ -1833,7 +1833,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 88500
+              "duration": 329300
             }
           },
           {
@@ -1842,11 +1842,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 49299
+              "duration": 102700
             }
           },
           {
@@ -1888,11 +1888,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 34999
+              "duration": 64199
             }
           },
           {
@@ -1901,11 +1901,11 @@
             "line": 91,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 43499
+              "duration": 277399
             }
           },
           {
@@ -1914,11 +1914,11 @@
             "line": 92,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 42400
+              "duration": 186000
             }
           },
           {
@@ -1927,11 +1927,11 @@
             "line": 93,
             "name": "刪除操作成功",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
             },
             "result": {
               "status": "passed",
-              "duration": 25399
+              "duration": 286699
             }
           },
           {
@@ -1940,11 +1940,11 @@
             "line": 94,
             "name": "任務應該有淡出動畫效果",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:250"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:250"
             },
             "result": {
               "status": "passed",
-              "duration": 238200
+              "duration": 296000
             }
           },
           {
@@ -1953,11 +1953,11 @@
             "line": 95,
             "name": "任務應該平滑地從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:255"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:255"
             },
             "result": {
               "status": "passed",
-              "duration": 204199
+              "duration": 462300
             }
           },
           {
@@ -1965,7 +1965,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 85499
+              "duration": 217000
             }
           },
           {
@@ -1973,7 +1973,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14599
+              "duration": 23799
             }
           }
         ],
@@ -1992,7 +1992,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23799
+              "duration": 30800
             }
           },
           {
@@ -2000,7 +2000,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 92300
+              "duration": 129600
             }
           },
           {
@@ -2009,11 +2009,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 52400
+              "duration": 64400
             }
           },
           {
@@ -2055,11 +2055,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 35300
+              "duration": 47599
             }
           },
           {
@@ -2068,11 +2068,11 @@
             "line": 98,
             "name": "我打開任務 \"完成專案報告\" 的刪除確認對話框",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:121"
             },
             "result": {
               "status": "passed",
-              "duration": 113900
+              "duration": 79299
             }
           },
           {
@@ -2081,11 +2081,11 @@
             "line": 99,
             "name": "我點擊 \"確認刪除\" 按鈕",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 42500
+              "duration": 64599
             }
           },
           {
@@ -2094,11 +2094,11 @@
             "line": 100,
             "name": "刪除操作成功",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
             },
             "result": {
               "status": "passed",
-              "duration": 23999
+              "duration": 28100
             }
           },
           {
@@ -2107,11 +2107,11 @@
             "line": 101,
             "name": "系統應該記錄刪除操作日誌",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:260"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:260"
             },
             "result": {
               "status": "passed",
-              "duration": 277000
+              "duration": 415799
             }
           },
           {
@@ -2120,11 +2120,11 @@
             "line": 102,
             "name": "日誌應該包含任務 ID 和描述",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:264"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:264"
             },
             "result": {
               "status": "passed",
-              "duration": 253799
+              "duration": 443299
             }
           },
           {
@@ -2132,7 +2132,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96900
+              "duration": 125900
             }
           },
           {
@@ -2140,7 +2140,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14099
+              "duration": 11799
             }
           }
         ],
@@ -2159,7 +2159,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38900
+              "duration": 43000
             }
           },
           {
@@ -2167,7 +2167,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140000
+              "duration": 286500
             }
           },
           {
@@ -2176,11 +2176,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 78500
+              "duration": 95299
             }
           },
           {
@@ -2222,11 +2222,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 42300
+              "duration": 63500
             }
           },
           {
@@ -2235,11 +2235,11 @@
             "line": 105,
             "name": "我嘗試刪除已完成任務 \"開會討論需求\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:273"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:273"
             },
             "result": {
               "status": "passed",
-              "duration": 740800
+              "duration": 1088900
             }
           },
           {
@@ -2248,11 +2248,11 @@
             "line": 106,
             "name": "我應該能夠成功刪除該任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
             },
             "result": {
               "status": "passed",
-              "duration": 243200
+              "duration": 416299
             }
           },
           {
@@ -2261,11 +2261,11 @@
             "line": 107,
             "name": "任務應該從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
             },
             "result": {
               "status": "passed",
-              "duration": 211900
+              "duration": 297099
             }
           },
           {
@@ -2274,11 +2274,11 @@
             "line": 108,
             "name": "我嘗試刪除待辦任務 \"撰寫技術文件\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:280"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:280"
             },
             "result": {
               "status": "passed",
-              "duration": 551699
+              "duration": 946800
             }
           },
           {
@@ -2287,11 +2287,11 @@
             "line": 109,
             "name": "我應該能夠成功刪除該任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:287"
             },
             "result": {
               "status": "passed",
-              "duration": 43799
+              "duration": 60500
             }
           },
           {
@@ -2300,11 +2300,11 @@
             "line": 110,
             "name": "任務應該從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:389"
             },
             "result": {
               "status": "passed",
-              "duration": 38799
+              "duration": 41400
             }
           },
           {
@@ -2312,7 +2312,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 95000
+              "duration": 255899
             }
           },
           {
@@ -2320,7 +2320,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14300
+              "duration": 25099
             }
           }
         ],
@@ -2339,7 +2339,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23500
+              "duration": 27200
             }
           },
           {
@@ -2347,7 +2347,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 79700
+              "duration": 106499
             }
           },
           {
@@ -2356,11 +2356,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 44599
+              "duration": 62299
             }
           },
           {
@@ -2402,11 +2402,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 37100
+              "duration": 30700
             }
           },
           {
@@ -2415,11 +2415,11 @@
             "line": 113,
             "name": "任務列表中只有一個任務 \"最後的任務\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:298"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:298"
             },
             "result": {
               "status": "passed",
-              "duration": 553800
+              "duration": 579299
             }
           },
           {
@@ -2428,11 +2428,11 @@
             "line": 114,
             "name": "我刪除這個任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:307"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:307"
             },
             "result": {
               "status": "passed",
-              "duration": 183399
+              "duration": 204700
             }
           },
           {
@@ -2441,11 +2441,11 @@
             "line": 115,
             "name": "刪除操作成功",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:189"
             },
             "result": {
               "status": "passed",
-              "duration": 27900
+              "duration": 25699
             }
           },
           {
@@ -2454,11 +2454,11 @@
             "line": 116,
             "name": "任務列表應該顯示空狀態",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:325"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:325"
             },
             "result": {
               "status": "passed",
-              "duration": 208499
+              "duration": 208700
             }
           },
           {
@@ -2467,11 +2467,11 @@
             "line": 117,
             "name": "空狀態應該包含提示訊息 \"目前沒有任務\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:330"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:330"
             },
             "result": {
               "status": "passed",
-              "duration": 574399
+              "duration": 517599
             }
           },
           {
@@ -2480,11 +2480,11 @@
             "line": 118,
             "name": "空狀態應該有新增任務的建議",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:334"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:334"
             },
             "result": {
               "status": "passed",
-              "duration": 239100
+              "duration": 224700
             }
           },
           {
@@ -2492,7 +2492,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96700
+              "duration": 127500
             }
           },
           {
@@ -2500,7 +2500,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10800
+              "duration": 16400
             }
           }
         ],
@@ -2519,7 +2519,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29099
+              "duration": 73700
             }
           },
           {
@@ -2527,7 +2527,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 207400
+              "duration": 223100
             }
           },
           {
@@ -2536,11 +2536,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 76900
+              "duration": 71100
             }
           },
           {
@@ -2582,11 +2582,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 36399
+              "duration": 53499
             }
           },
           {
@@ -2595,11 +2595,11 @@
             "line": 121,
             "name": "我有一個 待辦 任務 \"學習新技術\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
             },
             "result": {
               "status": "passed",
-              "duration": 726800
+              "duration": 843200
             }
           },
           {
@@ -2608,11 +2608,11 @@
             "line": 122,
             "name": "我刪除選中的任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
             },
             "result": {
               "status": "passed",
-              "duration": 203999
+              "duration": 302299
             }
           },
           {
@@ -2621,11 +2621,11 @@
             "line": 123,
             "name": "任務應該成功從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
             },
             "result": {
               "status": "passed",
-              "duration": 207700
+              "duration": 362500
             }
           },
           {
@@ -2634,11 +2634,11 @@
             "line": 124,
             "name": "應該顯示相應的成功訊息",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
             },
             "result": {
               "status": "passed",
-              "duration": 402600
+              "duration": 1108400
             }
           },
           {
@@ -2646,7 +2646,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 110899
+              "duration": 467999
             }
           },
           {
@@ -2654,7 +2654,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 9599
+              "duration": 19400
             }
           }
         ],
@@ -2673,7 +2673,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30399
+              "duration": 29799
             }
           },
           {
@@ -2681,7 +2681,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 110699
+              "duration": 112700
             }
           },
           {
@@ -2690,11 +2690,11 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 64200
+              "duration": 58100
             }
           },
           {
@@ -2736,11 +2736,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 32800
+              "duration": 29899
             }
           },
           {
@@ -2749,11 +2749,11 @@
             "line": 121,
             "name": "我有一個 已完成 任務 \"完成報告\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:351"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:351"
             },
             "result": {
               "status": "passed",
-              "duration": 676399
+              "duration": 609199
             }
           },
           {
@@ -2762,11 +2762,11 @@
             "line": 122,
             "name": "我刪除選中的任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
             },
             "result": {
               "status": "passed",
-              "duration": 25499
+              "duration": 234999
             }
           },
           {
@@ -2775,11 +2775,11 @@
             "line": 123,
             "name": "任務應該成功從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
             },
             "result": {
               "status": "passed",
-              "duration": 41900
+              "duration": 286399
             }
           },
           {
@@ -2788,11 +2788,11 @@
             "line": 124,
             "name": "應該顯示相應的成功訊息",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
             },
             "result": {
               "status": "passed",
-              "duration": 80799
+              "duration": 320300
             }
           },
           {
@@ -2800,7 +2800,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 71599
+              "duration": 121999
             }
           },
           {
@@ -2808,7 +2808,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8700
+              "duration": 10899
             }
           }
         ],
@@ -2827,7 +2827,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24900
+              "duration": 28700
             }
           },
           {
@@ -2835,7 +2835,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 105499
+              "duration": 111899
             }
           },
           {
@@ -2844,7 +2844,7 @@
             "line": 8,
             "name": "我在任務管理頁面",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:39"
             },
             "result": {
               "status": "passed",
@@ -2890,11 +2890,11 @@
             "line": 9,
             "name": "系統中存在以下任務:",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 30500
+              "duration": 31599
             }
           },
           {
@@ -2903,11 +2903,11 @@
             "line": 121,
             "name": "我有一個 待辦 任務 \"準備會議資料\"",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:339"
             },
             "result": {
               "status": "passed",
-              "duration": 137400
+              "duration": 572100
             }
           },
           {
@@ -2916,11 +2916,11 @@
             "line": 122,
             "name": "我刪除選中的任務",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:317"
             },
             "result": {
               "status": "passed",
-              "duration": 20800
+              "duration": 29199
             }
           },
           {
@@ -2929,11 +2929,11 @@
             "line": 123,
             "name": "任務應該成功從列表中移除",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:376"
             },
             "result": {
               "status": "passed",
-              "duration": 37000
+              "duration": 46600
             }
           },
           {
@@ -2942,11 +2942,11 @@
             "line": 124,
             "name": "應該顯示相應的成功訊息",
             "match": {
-              "location": "file:\\D:\\codes\\ToDoListBdd\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
+              "location": "file:\\D:\\codes\\ToDoListBDD\\src\\frontend\\src\\tests\\step-definitions\\task-deletion-simple.steps.ts:380"
             },
             "result": {
               "status": "passed",
-              "duration": 72000
+              "duration": 81900
             }
           },
           {
@@ -2954,7 +2954,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65800
+              "duration": 121500
             }
           },
           {
@@ -2962,7 +2962,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8700
+              "duration": 12200
             }
           }
         ],

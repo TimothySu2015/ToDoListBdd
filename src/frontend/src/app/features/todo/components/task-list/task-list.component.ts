@@ -2,14 +2,18 @@ import { Component, computed, signal, HostListener, ViewChild, OnInit, inject, e
 import { CommonModule } from '@angular/common';
 import { TaskService } from '../../services/task.service';
 import { ViewStateService } from '../../services/view-state.service';
+import { SearchService } from '../../services/search.service';
 import { Task, TaskViewType } from '../../models/task.interface';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { ToastNotificationComponent } from '../toast-notification/toast-notification.component';
+import { TaskSearchComponent } from '../task-search/task-search.component';
+import { TaskHighlightComponent } from '../task-highlight/task-highlight.component';
+import { ClearCompletedComponent } from '../clear-completed/clear-completed.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule, ConfirmDialogComponent, ToastNotificationComponent],
+  imports: [CommonModule, ConfirmDialogComponent, ToastNotificationComponent, TaskSearchComponent, TaskHighlightComponent, ClearCompletedComponent],
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
@@ -35,6 +39,7 @@ export class TaskListComponent implements OnInit {
   private toastComponent!: ToastNotificationComponent;
 
   private viewStateService = inject(ViewStateService);
+  public searchService = inject(SearchService);
 
   constructor(public taskService: TaskService) {
     // 當檢視狀態改變時，重新載入任務

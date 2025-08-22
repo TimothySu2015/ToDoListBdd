@@ -54,11 +54,11 @@ public class TasksController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<TaskDto>>> GetTasks([FromQuery] string? status = null)
+    public async Task<ActionResult<List<TaskDto>>> GetTasks([FromQuery] string? status = null, [FromQuery] string? search = null)
     {
         try
         {
-            var query = new GetTasksQuery { Status = status };
+            var query = new GetTasksQuery { Status = status, Search = search };
             var result = await _mediator.Send(query);
             return Ok(result);
         }
@@ -170,6 +170,21 @@ public class TasksController : ControllerBase
         catch (Exception ex)
         {
             return StatusCode(500, new { Message = "刪除任務時發生內部錯誤", Error = ex.Message });
+        }
+    }
+
+    [HttpDelete("completed")]
+    public async Task<ActionResult<ClearCompletedTasksResponse>> ClearCompleted()
+    {
+        try
+        {
+            var command = new ClearCompletedTasksCommand();
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = "清除操作失敗", message = ex.Message });
         }
     }
 }

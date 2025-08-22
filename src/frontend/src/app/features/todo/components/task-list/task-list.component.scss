@@ -9,11 +9,20 @@
   padding-bottom: 1rem;
   border-bottom: 2px solid #e9ecef;
 
-  h2 {
-    margin: 0 0 0.5rem 0;
-    color: #343a40;
-    font-size: 1.5rem;
-    font-weight: 600;
+  .counter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+
+    h2 {
+      margin: 0;
+      color: #343a40;
+      font-size: 1.5rem;
+      font-weight: 600;
+      flex: 1;
+    }
   }
 
   .task-counts {
@@ -572,4 +581,27 @@
     gap: 1rem;
     text-align: center;
   }
+}
+
+// 搜尋相關樣式
+:host ::ng-deep .search-highlight {
+  background-color: #fef08a; // yellow-200
+  color: #713f12; // yellow-900
+  font-weight: 500;
+  padding: 1px 2px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  
+  // 高對比度支援
+  @media (prefers-contrast: high) {
+    background-color: #ffff00;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+}
+
+// 搜尋載入狀態
+.search-loading {
+  opacity: 0.7;
+  pointer-events: none;
 }

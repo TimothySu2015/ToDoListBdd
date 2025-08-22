@@ -79,23 +79,23 @@ namespace ToDoListBDD.Tests.Features
         {
 #line 6
   #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "描述",
                         "狀態"});
-            table1.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "開發新功能",
                         "待辦"});
-            table1.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "測試功能",
                         "待辦"});
-            table1.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "部署到生產",
                         "已完成"});
-            table1.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "撰寫文件",
                         "已完成"});
 #line 7
-    testRunner.Given("系統中有以下任務：", ((string)(null)), table1, "Given ");
+    testRunner.Given("系統中有以下任務：", ((string)(null)), table3, "Given ");
 #line hidden
         }
         

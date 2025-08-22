@@ -1,0 +1,57 @@
+<div class="search-container" data-testid="search-container">
+  <div class="search-input-wrapper">
+    <!-- 搜尋圖示 -->
+    <span class="search-icon" data-testid="search-icon" aria-hidden="true">🔍</span>
+    
+    <!-- 搜尋輸入框 -->
+    <input
+      #searchInput
+      type="text"
+      class="search-input"
+      [class.loading]="isLoading"
+      [class.focused]="false"
+      placeholder="搜尋任務..."
+      autocomplete="off"
+      spellcheck="false"
+      inputmode="search"
+      role="searchbox"
+      aria-label="搜尋任務"
+      [attr.data-testid]="'search-input'"
+      (input)="onSearchInput($event)"
+      (keydown)="onSearchKeydown($event)"
+    />
+    
+    <!-- 載入指示器 -->
+    <div
+      *ngIf="isLoading"
+      class="loading-indicator"
+      data-testid="search-loading"
+      aria-hidden="true"
+    >
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- 清除按鈕 -->
+    <button
+      *ngIf="hasSearchTerm && !isLoading"
+      type="button"
+      class="clear-search"
+      [attr.data-testid]="'clear-search'"
+      aria-label="清除搜尋"
+      title="清除搜尋 (ESC)"
+      (click)="clearSearch()"
+    >
+      ✕
+    </button>
+  </div>
+  
+  <!-- 搜尋狀態宣告 (無障礙) -->
+  <div
+    class="search-status"
+    data-testid="search-status"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    <span *ngIf="isLoading">正在搜尋...</span>
+  </div>
+</div>

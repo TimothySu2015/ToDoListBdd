@@ -1,7 +1,14 @@
 <div class="task-list-container">
+  <!-- 搜尋元件 -->
+  <app-task-search></app-task-search>
+
   <!-- 任務計數器 -->
   <div class="task-counter" data-testid="task-counter">
-    <h2>待辦任務</h2>
+    <div class="counter-header">
+      <h2>待辦任務</h2>
+      <!-- 清除已完成任務按鈕 -->
+      <app-clear-completed></app-clear-completed>
+    </div>
     <div class="task-counts">
       <span class="pending-count">
         {{ taskService.pendingTaskCount() }} 個待辦任務
@@ -50,19 +57,31 @@
     class="empty-state"
     data-testid="empty-state"
   >
-    <div class="empty-icon">📋</div>
-    <h3>目前沒有任務</h3>
-    <p>太棒了！所有任務都已完成，或者您可以新增新的任務開始工作。</p>
-    <div class="empty-actions">
-      <button 
-        type="button" 
-        class="refresh-button"
-        (click)="reloadTasks()"
-        [disabled]="taskService.loading()"
-        data-testid="empty-refresh-button"
-      >
-        🔄 重新整理
-      </button>
+    <!-- 搜尋無結果 -->
+    <div *ngIf="searchService.isSearching()" class="no-results" data-testid="no-results">
+      <div class="no-results-icon">🔍</div>
+      <h3 class="no-results-text" data-testid="no-results-message">找不到匹配的任務</h3>
+      <p class="no-results-suggestion" data-testid="no-results-suggestion">
+        請嘗試使用不同的搜尋關鍵字，或清除搜尋以查看所有任務。
+      </p>
+    </div>
+    
+    <!-- 正常空狀態 -->
+    <div *ngIf="!searchService.isSearching()">
+      <div class="empty-icon">📋</div>
+      <h3 data-testid="empty-message">目前沒有任務</h3>
+      <p>太棒了！所有任務都已完成，或者您可以新增新的任務開始工作。</p>
+      <div class="empty-actions" data-testid="empty-action">
+        <button 
+          type="button" 
+          class="refresh-button"
+          (click)="reloadTasks()"
+          [disabled]="taskService.loading()"
+          data-testid="empty-refresh-button"
+        >
+          🔄 重新整理
+        </button>
+      </div>
     </div>
   </div>
 
@@ -111,7 +130,10 @@
              [class.completed-text]="task.isCompleted"
              [title]="task.description"
              (dblclick)="onTaskTextDoubleClick(task)">
-            {{ task.description }}
+            <app-task-highlight 
+              [text]="task.description" 
+              [searchTerm]="searchService.getCurrentSearchTerm()">
+            </app-task-highlight>
           </p>
           
           <!-- 編輯模式 -->

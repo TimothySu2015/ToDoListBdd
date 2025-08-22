@@ -79,26 +79,26 @@ namespace ToDoListBDD.Tests.Features
         {
 #line 6
 #line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Description",
                         "IsCompleted",
                         "CreatedAt",
                         "UpdatedAt"});
-            table2.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "1",
                         "完成專案報告",
                         "false",
                         "2025-08-21 10:00:00",
                         "2025-08-21 10:00:00"});
-            table2.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "2",
                         "測試功能",
                         "true",
                         "2025-08-21 11:00:00",
                         "2025-08-21 11:30:00"});
 #line 7
-    testRunner.Given("資料庫中有以下任務:", ((string)(null)), table2, "Given ");
+    testRunner.Given("資料庫中有以下任務:", ((string)(null)), table5, "Given ");
 #line hidden
         }
         

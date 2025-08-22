@@ -1,0 +1,203 @@
+.search-container {
+  margin-bottom: 16px;
+  
+  .search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    padding: 12px;
+    transition: all 0.2s ease;
+    min-height: 44px; // 符合觸控標準
+    
+    &:focus-within {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .search-icon {
+      color: #6b7280;
+      margin-right: 8px;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px; // 防止行動裝置縮放
+      background: transparent;
+      min-width: 0; // 防止溢出
+      
+      &::placeholder {
+        color: #9ca3af;
+      }
+      
+      &.loading {
+        opacity: 0.7;
+      }
+      
+      &.focused {
+        // 已通過 focus-within 處理
+      }
+    }
+    
+    .loading-indicator {
+      margin-left: 8px;
+      flex-shrink: 0;
+      
+      .spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid #e5e7eb;
+        border-top: 2px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+    }
+
+    .clear-search {
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 4px 8px;
+      margin-left: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1;
+      min-height: 32px;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+      
+      &:hover {
+        color: #374151;
+        background-color: #f3f4f6;
+      }
+      
+      &:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    }
+  }
+  
+  .search-status {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    
+    // 只在有內容時顯示給螢幕閱讀器
+    &:not(:empty) {
+      position: static;
+      width: auto;
+      height: auto;
+      font-size: 0; // 視覺上隱藏但可被螢幕閱讀器讀取
+    }
+  }
+}
+
+// 高亮顯示樣式
+.search-highlight {
+  background-color: #fef08a; // yellow-200
+  color: #713f12; // yellow-900
+  font-weight: 500;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+// 無結果提示
+.no-results {
+  text-align: center;
+  color: #6b7280;
+  padding: 48px 16px;
+  
+  .no-results-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+  
+  .no-results-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .no-results-suggestion {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.5;
+  }
+}
+
+// 動畫
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 行動裝置優化
+@media (max-width: 768px) {
+  .search-container {
+    .search-input-wrapper {
+      padding: 16px 12px; // 增加觸控區域
+      
+      .search-input {
+        font-size: 16px; // 確保不縮放
+      }
+      
+      .clear-search {
+        min-height: 44px;
+        min-width: 44px;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+// 高對比度支援
+@media (prefers-contrast: high) {
+  .search-container {
+    .search-input-wrapper {
+      border-color: #000;
+      
+      &:focus-within {
+        border-color: #0000ff;
+        box-shadow: 0 0 0 2px #0000ff;
+      }
+    }
+    
+    .search-highlight {
+      background-color: #ffff00;
+      color: #000000;
+    }
+  }
+}
+
+// 減少動畫偏好
+@media (prefers-reduced-motion: reduce) {
+  .search-container {
+    .search-input-wrapper {
+      transition: none;
+    }
+    
+    .loading-indicator .spinner {
+      animation: none;
+      border-top-color: transparent;
+    }
+  }
+}

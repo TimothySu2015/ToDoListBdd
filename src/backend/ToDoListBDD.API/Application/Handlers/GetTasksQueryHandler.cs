@@ -33,6 +33,13 @@ public class GetTasksQueryHandler : IRequestHandler<GetTasksQuery, List<TaskDto>
             // "all" 或其他值則不篩選，返回所有任務
         }
 
+        // 根據搜尋關鍵字篩選
+        if (!string.IsNullOrWhiteSpace(request.Search))
+        {
+            var searchTerm = request.Search.Trim().ToLower();
+            query = query.Where(t => EF.Functions.Like(t.Description.ToLower(), $"%{searchTerm}%"));
+        }
+
         return await query
             .OrderBy(t => t.CreatedAt)
             .Select(t => new TaskDto

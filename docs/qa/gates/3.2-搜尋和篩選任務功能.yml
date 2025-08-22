@@ -1,0 +1,8 @@
+schema: 1
+story: '3.2'
+gate: PASS
+status_reason: '所有驗收標準已完成，測試全部通過，功能運行正常。'
+reviewer: 'Quinn'
+updated: '2025-08-22T11:45:00Z'
+top_issues: []
+waiver: { active: false }

@@ -2,7 +2,7 @@ import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError, of } from 'rxjs';
 import { catchError, map, finalize, tap, delay } from 'rxjs/operators';
-import { Task, CreateTaskRequest, CreateTaskResponse, TaskValidationError, TaskViewType } from '../models/task.interface';
+import { Task, CreateTaskRequest, CreateTaskResponse, TaskValidationError, TaskViewType, ClearCompletedTasksResponse } from '../models/task.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -261,6 +261,44 @@ export class TaskService {
   }
 
   /**
+   * 搜尋任務
+   * @param searchTerm 搜尋關鍵字
+   * @param status 任務狀態篩選
+   * @returns Observable<Task[]>
+   */
+  searchTasks(searchTerm: string, status?: TaskViewType): Observable<Task[]> {
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    const params: { [key: string]: string } = {};
+    
+    if (searchTerm.trim()) {
+      params['search'] = searchTerm.trim();
+    }
+    
+    if (status && status !== TaskViewType.ALL) {
+      params['status'] = status === TaskViewType.TODO ? 'todo' : 'completed';
+    }
+
+    const queryParams = new URLSearchParams(params).toString();
+    const url = queryParams ? `${this.apiUrl}?${queryParams}` : this.apiUrl;
+
+    return this.http.get<Task[]>(url).pipe(
+      tap(tasks => {
+        this.tasksSignal.set(tasks);
+      }),
+      catchError((error: HttpErrorResponse) => {
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        return throwError(() => new Error(errorMessage));
+      }),
+      finalize(() => {
+        this.loadingSignal.set(false);
+      })
+    );
+  }
+
+  /**
    * 清除錯誤訊息
    */
   clearError(): void {
@@ -362,5 +400,63 @@ export class TaskService {
     }
     
     return `發生未知錯誤 (${error.status}): ${error.message}`;
+  }
+
+  /**
+   * 批量清除已完成任務
+   * @returns Observable<ClearCompletedTasksResponse>
+   */
+  clearCompletedTasks(): Observable<ClearCompletedTasksResponse> {
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    return this.http.delete<ClearCompletedTasksResponse>(`${this.apiUrl}/completed`).pipe(
+      tap(response => {
+        // 更新本地任務列表，移除已完成的任務
+        const remainingTasks = this.tasksSignal().filter(task => !task.isCompleted);
+        this.tasksSignal.set(remainingTasks);
+      }),
+      catchError((error: HttpErrorResponse) => {
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        return throwError(() => new Error(errorMessage));
+      }),
+      finalize(() => {
+        this.loadingSignal.set(false);
+      })
+    );
+  }
+
+  /**
+   * 恢復已刪除的任務（Undo 功能）
+   * @param tasks 要恢復的任務列表
+   * @returns Observable<Task[]>
+   */
+  restoreTasks(tasks: Task[]): Observable<Task[]> {
+    this.loadingSignal.set(true);
+    this.errorSignal.set(null);
+
+    // 批量恢復任務
+    const restorePromises = tasks.map(task => 
+      this.http.post<Task>(this.apiUrl, { Description: task.description }).toPromise()
+    );
+
+    return new Observable(observer => {
+      Promise.all(restorePromises).then(restoredTasks => {
+        // 更新本地任務列表
+        const currentTasks = this.tasksSignal();
+        const updatedTasks = [...currentTasks, ...restoredTasks.filter(Boolean) as Task[]];
+        this.tasksSignal.set(updatedTasks);
+        
+        observer.next(restoredTasks.filter(Boolean) as Task[]);
+        observer.complete();
+      }).catch(error => {
+        const errorMessage = this.handleHttpError(error);
+        this.errorSignal.set(errorMessage);
+        observer.error(new Error(errorMessage));
+      }).finally(() => {
+        this.loadingSignal.set(false);
+      });
+    });
   }
 }

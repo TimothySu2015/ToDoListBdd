@@ -26,3 +26,15 @@ export enum TaskViewType {
   COMPLETED = 'completed',
   ALL = 'all'
 }
+
+export interface ClearCompletedTasksResponse {
+  deletedCount: number;
+  message: string;
+  deletedTasks: Task[];
+}
+
+export interface UndoState {
+  showUndo: boolean;
+  deletedTasks: Task[];
+  countdown: number;
+}
